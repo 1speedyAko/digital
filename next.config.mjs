@@ -3,7 +3,7 @@ import { withNextVideo } from "next-video/process";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['plus.unsplash.com'], // Add any external domains from which you are loading images
+    domains: ['plus.unsplash.com', 'media.istockphoto.com','images.unsplash.com'], // Add any external domains from which you are loading images
   },
 };
 
