@@ -1,6 +1,7 @@
 import React from "react";
-import Intro from "../intro/page";
-
+import Intro from "../intro/Intro";
+import Texts from "../text/Info";
+import Image from "next/image";
 
 function Body() {
     // JSON data directly within the component
@@ -37,7 +38,7 @@ function Body() {
                 {cards.map((card, index) => (
                     <div key={index} className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow md:py-8 md:mb-4">
                         <div className="h-96 w-72">
-                            <img
+                            <Image
                                 className="h-full w-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500"
                                 src={card.imageURL}
                                 alt={card.title}
@@ -55,6 +56,8 @@ function Body() {
                 ))}
             </div>
         </div>
+        <Texts/>
+
         </div>
         
     );
