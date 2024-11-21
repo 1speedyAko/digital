@@ -42,6 +42,10 @@ function Body() {
                                 className="h-full w-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500"
                                 src={card.imageURL}
                                 alt={card.title}
+                                fill // Use the fill attribute
+                                sizes="(max-width: 768px) 100vw, 
+                                    (max-width: 1200px) 50vw, 
+                                    33vw" // Optional for better optimization
                             />
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
