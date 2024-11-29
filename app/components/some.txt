@@ -7,41 +7,51 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFlyout, setOpenFlyout] = useState(null);
+  const [loading, setLoading] = useState(false);  // For simulating loading
 
   const handleMouseEnter = (menu) => setOpenFlyout(menu);
   const handleMouseLeave = () => setOpenFlyout(null);
 
   return (
-    <nav className="relative  shadow-md z-50 ">
+    <nav className="relative bg-white shadow-md z-50">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="text-xl font-bold text-gray-800">MyBrand</div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 justify-center w-full">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about" onMouseEnter={() => handleMouseEnter("about")} onMouseLeave={handleMouseLeave}
-          className='relative'>
-            About
-            <HoverLine active={openFlyout === "about"} />
+          <NavLink href="/" onMouseEnter={() => handleMouseEnter("home")} onMouseLeave={handleMouseLeave}>
+            Home
+          </NavLink>
+          <div
+            className="relative"
+            onMouseEnter={() => handleMouseEnter("about")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <NavLink href="/about">
+              About
+              {loading && openFlyout === "about" && <LoadingIndicator />}
+            </NavLink>
             <AnimatePresence>
               {openFlyout === "about" && <AboutFlyout />}
             </AnimatePresence>
-          </NavLink>
+          </div>
           <div
             className="relative"
             onMouseEnter={() => handleMouseEnter("services")}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="relative text-gray-800 hover:text-indigo-500">
+            <NavLink href="/services">
               Services
-              <HoverLine active={openFlyout === "services"} />
-            </button>
+              {loading && openFlyout === "services" && <LoadingIndicator />}
+            </NavLink>
             <AnimatePresence>
               {openFlyout === "services" && <ServicesFlyout />}
             </AnimatePresence>
           </div>
-          <NavLink href="/blog">Blog</NavLink>
+          <NavLink href="/blog" onMouseEnter={() => handleMouseEnter("blog")} onMouseLeave={handleMouseLeave}>
+            Blog
+          </NavLink>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -76,7 +86,7 @@ const Navbar = () => {
               <a href="/about" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
                 About
               </a>
-              <a href="#" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
+              <a href="/services" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
                 Services
               </a>
               <a href="/blog" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
@@ -94,6 +104,9 @@ const Navbar = () => {
 };
 
 const NavLink = ({ href, children, onMouseEnter, onMouseLeave }) => (
+  <div>
+
+  
   <a
     href={href}
     className="relative text-gray-800 hover:text-indigo-500 transition-colors"
@@ -101,8 +114,9 @@ const NavLink = ({ href, children, onMouseEnter, onMouseLeave }) => (
     onMouseLeave={onMouseLeave}
   >
     {children}
-    <HoverLine />
+    <HoverLine active={false} />
   </a>
+  </div>
 );
 
 const HoverLine = ({ active }) => (
@@ -114,20 +128,20 @@ const HoverLine = ({ active }) => (
   />
 );
 
+const LoadingIndicator = () => (
+  <div className="mt-2 w-8 h-1 bg-indigo-500 animate-pulse rounded-md"></div>
+);
+
 const AboutFlyout = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 30 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="absolute left-[10%] transform -translate-x-1/2 top-full mt-8  w-[600px] bg-white shadow-lg p-6 z-50  "
-      // style={{ left: "translateX(-20px)" }}
+      className="absolute left-1/2 top-full mt-4 w-[600px] bg-white shadow-lg p-6 z-50 transform -translate-x-1/2"
     >
-      {/* Arrow pointing to the button */}
-      <div className="absolute left-1/2  top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-
-      <div className="grid grid-cols-2 gap-6 ">
+      <div className="grid grid-cols-2 gap-6">
         {/* Left Section - About Us */}
         <div>
           <h3 className="font-semibold text-gray-800">About Us</h3>
@@ -166,16 +180,14 @@ const AboutFlyout = () => {
 const ServicesFlyout = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 15 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 15 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 30 }}
+      exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="absolute -left-1/2 top-full mt-8 w-[600px] bg-white shadow-lg p-6 z-50 transform -translate-x-1/2"
+      className="absolute left-1/2 top-full mt-4 w-[600px] bg-white shadow-lg p-6 z-50 transform -translate-x-1/2"
     >
-      {/* Arrow pointing to the button */}
-      <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-
-      <div className="grid grid-cols-2 gap-6 relative ml-14">
+      <div className="grid grid-cols-2 gap-6">
+        {/* Left Section - For Individuals */}
         <div>
           <h3 className="font-semibold text-gray-800">For Individuals</h3>
           <ul className="mt-2 space-y-2">
@@ -191,6 +203,8 @@ const ServicesFlyout = () => {
             </li>
           </ul>
         </div>
+
+        {/* Right Section - For Companies */}
         <div>
           <h3 className="font-semibold text-gray-800">For Companies</h3>
           <ul className="mt-2 space-y-2">
@@ -213,7 +227,7 @@ const ServicesFlyout = () => {
         </div>
       </div>
       <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500">
-        Explore Services
+        Get Started
       </button>
     </motion.div>
   );

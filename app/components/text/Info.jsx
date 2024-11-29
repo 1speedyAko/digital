@@ -7,7 +7,7 @@ import Image from 'next/image';
 function Texts() {
   return (
     <div className="space-y-10 bg-white">
-      <h1 className="font-bold text-center mt-3 text-3xl">Let's walk you through</h1>
+      <h1 className="font-bold text-center mt-3 text-3xl">Let&apos;s walk you through</h1>
 
       <div className="space-y-10">
         {/* First Section */}
