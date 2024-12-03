@@ -1,85 +1,138 @@
 'use client'
 
-import Image from "next/image"
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
 
-const links = [
-  { name: 'Open roles', href: '#' },
-  { name: 'Internship program', href: '#' },
-  { name: 'Our values', href: '#' },
-  { name: 'Meet our leadership', href: '#' },
-]
-const stats = [
-  { name: 'Offices worldwide', value: '12' },
-  { name: 'Full-time colleagues', value: '300+' },
-  { name: 'Hours per week', value: '40' },
-  { name: 'Paid time off', value: 'Unlimited' },
-]
-
-export default function Example() {
+const TextParallaxContentExample = () => {
   return (
-    <div className="relative isolate overflow-hidden  py-24 sm:py-32">
-      <Image
-        alt=""
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-        className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
-        fill
-      />
-      <div
-        aria-hidden="true"
-        className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+    <div className="bg-white">
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Collaborate"
+        heading="Built for all of us."
       >
-        <div
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-        />
-      </div>
-      <div
-        aria-hidden="true"
-        className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+        <ExampleContent />
+      </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Quality"
+        heading="Never compromise."
       >
-        <div
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-        />
-      </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <div className="grid lg:grid-cols-2 md:grid-cols-2">
-            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Why us</h2>
-            <div className="flex justify-end ">
-              <p>image here</p>
-            </div>
-          </div>
-          
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat.
-          </p>
-        </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-            {links.map((link) => (
-              <a key={link.name} href={link.href}>
-                {link.name} <span aria-hidden="true">&rarr;</span>
-              </a>
-            ))}
-          </div>
-          <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse gap-1">
-                <dt className="text-base/7 text-gray-300">{stat.name}</dt>
-                <dd className="text-4xl font-semibold tracking-tight text-white">{stat.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
+        <ExampleContent />
+      </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Modern"
+        heading="Dress for the best."
+      >
+        <ExampleContent />
+      </TextParallaxContent>
     </div>
-  )
-}
+  );
+};
+
+const IMG_PADDING = 12;
+
+const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+  return (
+    <div
+      style={{
+        paddingLeft: IMG_PADDING,
+        paddingRight: IMG_PADDING,
+      }}
+    >
+      <div className="relative h-[150vh]">
+        <StickyImage imgUrl={imgUrl} />
+        <OverlayCopy heading={heading} subheading={subheading} />
+      </div>
+      {children}
+    </div>
+  );
+};
+
+const StickyImage = ({ imgUrl }) => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["end end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  return (
+    <motion.div
+      style={{
+        backgroundImage: `url(${imgUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
+        top: IMG_PADDING,
+        scale,
+      }}
+      ref={targetRef}
+      className="sticky z-0 overflow-hidden rounded-3xl"
+    >
+      <motion.div
+        className="absolute inset-0 bg-neutral-950/70"
+        style={{
+          opacity,
+        }}
+      />
+    </motion.div>
+  );
+};
+
+const OverlayCopy = ({ subheading, heading }) => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
+  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
+
+  return (
+    <motion.div
+      style={{
+        y,
+        opacity,
+      }}
+      ref={targetRef}
+      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
+    >
+      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
+        {subheading}
+      </p>
+      <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
+    </motion.div>
+  );
+};
+
+const ExampleContent = () => (
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
+      Additional content explaining the above card here
+    </h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
+        maiores voluptate est ut saepe accusantium maxime doloremque nulla
+        consectetur possimus.
+      </p>
+      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        reiciendis blanditiis aliquam aut fugit sint.
+      </p>
+      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
+        Learn more <FiArrowUpRight className="inline" />
+      </button>
+    </div>
+  </div>
+);
+
+// Export the TextParallaxContentExample component correctly
+export default TextParallaxContentExample;

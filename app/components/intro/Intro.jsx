@@ -37,7 +37,7 @@ function Intro() {
   }, [text, isDeleting, index, speed, phrases]);
 
   return (
-    <div className="font-bold relative mt-24">
+    <div className="font-bold relative mt-14">
       <div className="h-[50vh] flex flex-col ">
        <div
   ref={ref}
@@ -47,7 +47,7 @@ function Intro() {
     {['LET\'S BUILD, IMPROVE,', 'AND SCALE YOUR BRAND'].map((line, lineIndex) => (
           <div
             key={lineIndex}
-            className="flex justify-center flex-wrap"
+            className="flex justify-center flex-wrap "
           >
             {line.split('').map((char, i) => (
               <motion.span
@@ -58,7 +58,7 @@ function Intro() {
                   duration: 0.05,
                   delay: (lineIndex * line.length + i) * 0.05,
                 }}
-                className="inline-block text-3xl sm:text-4xl md:text-5xl font-bold"
+                className="inline-block text-2xl sm:text-4xl md:text-5xl font-bold"
               >
                 {char === ' ' ? <span>&nbsp;</span> : char}
               </motion.span>

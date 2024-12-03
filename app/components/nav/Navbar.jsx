@@ -15,11 +15,11 @@ const Navbar = () => {
     <nav className="relative  shadow-md z-50 ">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="text-xl font-bold text-gray-800">MyBrand</div>
+        <div className="text-xl font-bold text-gray-200">MyBrand</div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 justify-center w-full">
-          <NavLink href="/">Home</NavLink>
+        <div className="hidden md:flex items-center gap-8 justify-center w-full ">
+          <NavLink href="/" className="text-gray-200">Home</NavLink>
           <NavLink href="/about" onMouseEnter={() => handleMouseEnter("about")} onMouseLeave={handleMouseLeave}
           className='relative'>
             About
@@ -28,20 +28,24 @@ const Navbar = () => {
               {openFlyout === "about" && <AboutFlyout />}
             </AnimatePresence>
           </NavLink>
-          <div
-            className="relative"
-            onMouseEnter={() => handleMouseEnter("services")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <button className="relative text-gray-800 hover:text-indigo-500">
-              Services
-              <HoverLine active={openFlyout === "services"} />
-            </button>
-            <AnimatePresence>
-              {openFlyout === "services" && <ServicesFlyout />}
-            </AnimatePresence>
-          </div>
-          <NavLink href="/blog">Blog</NavLink>
+          <NavLink href='/services'>
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("services")}
+              onMouseLeave={handleMouseLeave}
+             >
+              <button className="relative  ">
+                Services
+                <HoverLine active={openFlyout === "services"} />
+              </button>
+              <AnimatePresence>
+                {openFlyout === "services" && <ServicesFlyout />}
+              </AnimatePresence>
+            </div>
+          </NavLink>
+          <NavLink href="/contact" className="text-gray-200">Contact</NavLink>
+          
+          <NavLink href="/contact">Blog</NavLink>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -83,7 +87,7 @@ const Navbar = () => {
                 Blog
               </a>
               <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500">
-                Request a Demo
+                Request Quote
               </button>
             </div>
           </motion.div>
@@ -96,7 +100,7 @@ const Navbar = () => {
 const NavLink = ({ href, children, onMouseEnter, onMouseLeave }) => (
   <a
     href={href}
-    className="relative text-gray-800 hover:text-indigo-500 transition-colors"
+    className="relative text-gray-50 hover:text-gray-200 transition-colors"
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
@@ -110,18 +114,19 @@ const HoverLine = ({ active }) => (
     style={{
       transform: active ? "scaleX(1)" : "scaleX(0)",
     }}
-    className="absolute -bottom-2 left-0 right-0 h-1 origin-left scale-x-0 bg-indigo-500 transition-transform duration-300 ease-out"
+    className="absolute -bottom-2 left-0 right-0 h-1 origin-left scale-x-0 bg-amber-100 transition-transform duration-300 ease-out"
   />
 );
 
 const AboutFlyout = () => {
   return (
-    <motion.div
+    <div className="relative">
+      <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="absolute left-[10%] transform -translate-x-1/2 top-full mt-8  w-[600px] bg-white shadow-lg p-6 z-50  "
+      className="absolute left-[-630%] transform -translate-x-1/2 top-full mt-8  w-[600px] bg-white shadow-lg p-6 z-50  "
       // style={{ left: "translateX(-20px)" }}
     >
       {/* Arrow pointing to the button */}
@@ -129,7 +134,7 @@ const AboutFlyout = () => {
 
       <div className="grid grid-cols-2 gap-6 ">
         {/* Left Section - About Us */}
-        <div>
+        <div className="flex-1 bg-amber-100">
           <h3 className="font-semibold text-gray-800">About Us</h3>
           <p className="text-sm text-gray-600 mt-2">
             We are a team of passionate individuals dedicated to bringing the best services to our clients.
@@ -160,6 +165,8 @@ const AboutFlyout = () => {
         Learn More About Us
       </button>
     </motion.div>
+    </div>
+    
   );
 };
 
@@ -170,48 +177,74 @@ const ServicesFlyout = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 15 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="absolute -left-1/2 top-full mt-8 w-[600px] bg-white shadow-lg p-6 z-50 transform -translate-x-1/2"
+      className="absolute left-[-480%] top-full mt-8 w-[600px] bg-white shadow-lg p-6 z-50 transform -translate-x-1/2"
     >
       {/* Arrow pointing to the button */}
       <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
 
-      <div className="grid grid-cols-2 gap-6 relative ml-14">
-        <div>
-          <h3 className="font-semibold text-gray-800">For Individuals</h3>
-          <ul className="mt-2 space-y-2">
-            <li>
-              <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                Introduction
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                Pay as you go
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="font-semibold text-gray-800">For Companies</h3>
-          <ul className="mt-2 space-y-2">
-            <li>
-              <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                Startups
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                SMBs
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                Enterprise
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div className="grid grid-cols-3 gap-6 relative ml-14">
+      <div>
+        <h3 className="font-semibold text-gray-800">Graphic design</h3>
+        <ul className="mt-2 space-y-2">
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Business Cards
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Flyers
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Posters
+            </a>
+          </li>
+        </ul>
       </div>
+      <div>
+        <h3 className="font-semibold text-gray-800">Web development</h3>
+        <ul className="mt-2 space-y-2">
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Web Design
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              SEO
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Ads and content marketing
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="font-semibold text-gray-800">Branding</h3>
+        <ul className="mt-2 space-y-2">
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Logo Design
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Brand Guidelines
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+              Social Media Branding
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
       <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500">
         Explore Services
       </button>
