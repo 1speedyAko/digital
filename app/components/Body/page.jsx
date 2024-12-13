@@ -2,6 +2,7 @@ import React from "react";
 import Intro from "../intro/Intro";
 import Texts from "../text/Info";
 import Image from "next/image";
+import HoverDevCards from "../Nutshel";
 
 function Body() {
     // JSON data directly within the component
@@ -61,6 +62,7 @@ function Body() {
             </div>
         </div>
         <Texts/>
+        <HoverDevCards/>
 
         </div>
         

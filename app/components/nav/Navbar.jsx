@@ -3,13 +3,26 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { IoLinkOutline } from "react-icons/io5";
+import { FaAngleDown,FaAngleUp } from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFlyout, setOpenFlyout] = useState(null);
+  const [openArrow, setOpenArrow] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const handleMouseEnter = (menu) => setOpenFlyout(menu);
   const handleMouseLeave = () => setOpenFlyout(null);
+
+  const dropdown = () => {
+    setOpenArrow((prev)=>!prev)
+  }
+  
+  const serviceDropDown = () =>{
+    setOpen((prev)=>!prev)
+  }
 
   return (
     <nav className="relative  shadow-md z-50 ">
@@ -21,8 +34,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8 justify-center w-full ">
           <NavLink href="/" className="text-gray-200">Home</NavLink>
           <NavLink href="/about" onMouseEnter={() => handleMouseEnter("about")} onMouseLeave={handleMouseLeave}
-          className='relative'>
+           className='relative'>
             About
+           
             <HoverLine active={openFlyout === "about"} />
             <AnimatePresence>
               {openFlyout === "about" && <AboutFlyout />}
@@ -77,12 +91,112 @@ const Navbar = () => {
               <a href="/" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
                 Home
               </a>
-              <a href="/about" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
-                About
-              </a>
-              <a href="#" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
-                Services
-              </a>
+              <div className="flex items-center justify-between py-2 text-gray-800 hover:bg-gray-100 rounded">
+                <a href="/about" className="text-gray-800">
+                  About
+                </a>
+                <div onClick={dropdown} className="cursor-pointer ml-2">
+                  {openArrow ? <FaAngleUp /> : <FaAngleDown />}
+                </div>
+              </div>
+              {openArrow && (
+                <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-gray-100 rounded-md shadow-sm">
+                  <Link href="/features">
+                    <h4 className="font-semibold text-gray-800">Features</h4>
+                  </Link>
+                </div>
+      
+                  <div className="p-4 bg-gray-100 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-gray-800">Testimonials</h4>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 bg-gray-100 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-gray-800">Team</h4>
+                  </div>
+                  <div className="p-4 bg-gray-100 rounded-md shadow-sm">
+                    <h4 className="font-semibold text-gray-800">Partners</h4>
+                  </div>
+                </div>
+              </div>
+              )}
+
+
+              <div className="flex items-center justify-between py-2 text-gray-800 hover:bg-gray-100 rounded">
+                <a href="#" className=" text-gray-800 ">
+                  Services
+                </a>
+                <div onClick={serviceDropDown}>
+                    {open ? <FaAngleUp/>  : <FaAngleDown/> }
+                </div>
+              </div>
+              {open&&(
+                <div className="grid grid-cols-3 gap-6 relative text-center">
+                <div>
+                  <h3 className="font-semibold text-gray-800">Graphic design</h3>
+                  <ul className="mt-2 space-y-2">
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Business Cards
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Flyers
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Posters
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800">Web development</h3>
+                  <ul className="mt-2 space-y-2">
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Web Design
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        SEO
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Ads and content marketing
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800">Branding</h3>
+                  <ul className="mt-2 space-y-2">
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Logo Design
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Brand Guidelines
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+                        Social Media Branding
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              )}
+              
               <a href="/blog" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
                 Blog
               </a>
@@ -144,9 +258,12 @@ const AboutFlyout = () => {
         {/* Right Section - Small Boxes */}
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 bg-gray-100 rounded-md shadow-sm">
+          <div className="p-4 bg-gray-100 rounded-md shadow-sm">
+            <Link href="/features">
               <h4 className="font-semibold text-gray-800">Features</h4>
-            </div>
+            </Link>
+          </div>
+
             <div className="p-4 bg-gray-100 rounded-md shadow-sm">
               <h4 className="font-semibold text-gray-800">Testimonials</h4>
             </div>
