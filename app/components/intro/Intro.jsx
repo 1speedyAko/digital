@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 
 function Intro() {
@@ -10,7 +10,7 @@ function Intro() {
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed, setSpeed] = useState(150);
-  const phrases = ['custom websites', 'graphic design', 'Digital marketing'];
+  const phrases = useMemo(()=>(['custom websites', 'graphic design', 'Digital marketing']))
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
 

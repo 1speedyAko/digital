@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-6">Get in Touch</h1>
         <p className="text-center text-gray-600 mb-12">
-          We're here to help. Fill out the form below or contact us directly.
+          We&apos;re here to help. Fill out the form below or contact us directly.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10">
