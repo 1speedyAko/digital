@@ -42,7 +42,7 @@ const Navbar = () => {
               {openFlyout === "about" && <AboutFlyout />}
             </AnimatePresence>
           </NavLink>
-          <NavLink href='/services'>
+          <NavLink>
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("services")}
@@ -79,7 +79,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.3 }}
-            className="absolute top-0 left-0 w-64 h-screen bg-white shadow-lg z-50"
+            className="absolute top-0 left-0 w-64 min-h-screen bg-white shadow-lg z-50 "
           >
             <div className="p-4">
               <button
@@ -125,76 +125,60 @@ const Navbar = () => {
 
 
               <div className="flex items-center justify-between py-2 text-gray-800 hover:bg-gray-100 rounded">
-                <a href="#" className=" text-gray-800 ">
+                <a  className=" text-gray-800 ">
                   Services
                 </a>
-                <div onClick={serviceDropDown}>
+                <div onClick={serviceDropDown} >
                     {open ? <FaAngleUp/>  : <FaAngleDown/> }
                 </div>
               </div>
               {open&&(
-                <div className="grid grid-cols-3 gap-6 relative text-center">
-                <div>
-                  <h3 className="font-semibold text-gray-800">Graphic design</h3>
-                  <ul className="mt-2 space-y-2">
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Business Cards
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Flyers
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Posters
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-800">Web development</h3>
-                  <ul className="mt-2 space-y-2">
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Web Design
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        SEO
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Ads and content marketing
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-800">Branding</h3>
-                  <ul className="mt-2 space-y-2">
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Logo Design
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Brand Guidelines
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-                        Social Media Branding
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+       <div className="space-y-8 text-center text-sm py-1">
+       <div className="text-sm">
+         <h3 className="font-semibold text-gray-800 mb-2">Graphic Design</h3>
+         <ul className="space-y-2">
+           <li>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Business Cards</a>
+           </li>
+           <li>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Flyers</a>
+           </li>
+           <li>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Posters</a>
+           </li>
+         </ul>
+       </div>
+       
+       <div>
+         <h3 className="font-semibold text-gray-800 mb-2">Web Design</h3>
+         <ul className="space-y-2">
+           <li>
+             <Link href="/webdesign" className="text-sm text-gray-600 hover:text-indigo-500">Custom Web Design</Link>
+           </li>
+           <li>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">SEO</Link>
+           </li>
+           <li>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Ads and Content Marketing</a>
+           </li>
+         </ul>
+       </div>
+       
+       <div>
+         <h3 className="font-semibold text-gray-800 mb-2">Branding</h3>
+         <ul className="space-y-2">
+           <li>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Logo Design</a>
+           </li>
+           <li>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Brand Guidelines</a>
+           </li>
+           <li>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Social Media Branding</a>
+           </li>
+         </ul>
+       </div>
+     </div>
               )}
               
               <a href="/blog" className="block py-2 text-gray-800 hover:bg-gray-100 rounded">
@@ -324,19 +308,19 @@ const ServicesFlyout = () => {
         <h3 className="font-semibold text-gray-800">Web development</h3>
         <ul className="mt-2 space-y-2">
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+            <Link href="/webdesign" className="text-sm text-gray-600 hover:text-indigo-500">
               Web Design
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-              SEO
-            </a>
+           <Link href="/seo" className="text-sm text-gray-600 hover:text-indigo-500">
+              seo
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-              Ads and content marketing
-            </a>
+            <Link href="/content" className="text-sm text-gray-600 hover:text-indigo-500">
+              Ads & content marketing
+            </Link>
           </li>
         </ul>
       </div>

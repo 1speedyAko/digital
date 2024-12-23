@@ -2,6 +2,7 @@ import React from "react";
 import {  FiMail, FiUsers } from "react-icons/fi";
 import { IoLayersOutline } from "react-icons/io5"
 import { FaHandshake, FaRegUser } from "react-icons/fa";
+import { CiWallet } from "react-icons/ci";
 
 
 const HoverDevCards = () => {
@@ -15,7 +16,7 @@ const HoverDevCards = () => {
           href="#"
           Icon={FaHandshake}
         />
-        <Card title="B2C" subtitle="Business To Client" href="#" Icon={FaRegUser} />
+        <Card title="B2C" subtitle="Business To Client" href="#" Icon={CiWallet} />
         <Card title="Team" subtitle="Manage team" href="#" Icon={FaRegUser} />
         <Card
           title="Bespoke"
