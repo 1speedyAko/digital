@@ -59,7 +59,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink href="/contact" className="text-gray-200">Contact</NavLink>
           
-          <NavLink href="/contact">Blog</NavLink>
+          <NavLink href="/blog">Blog</NavLink>
         </div>
 
         {/* Mobile Menu Icon */}
