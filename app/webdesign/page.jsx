@@ -2,6 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { Carousel } from '@/components/ui/carousel';
 import Slider from '../components/Slider';
+import Form from '../components/Form';
+import { FaCheck } from "react-icons/fa";
+import ListHover from '../components/ListHover';
 
 const cardContent = {
   title: "Lorem ipsum dolor",
@@ -16,6 +19,12 @@ const CardBody = ({ className = "" }) => (
     <p className="text-sm leading-5">{cardContent.description}</p>
   </div>
 );
+
+const list = [
+  {text:"Modern Websites", icon:<FaCheck style={{color:'green'}}/>},
+  {text:"Unique Design", icon:<FaCheck style={{color:'green'}}/>},
+  {text:"Responsive Websites", icon:<FaCheck style={{color:'green'}}/>},
+]
 
 const CardWithImageV1 = ({ children }) => (
   <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group">
@@ -38,15 +47,32 @@ const CardWithImageV1 = ({ children }) => (
 function WebDesign() {
   return (
     <div className="min-h-full">
-      <div className="grid md:grid-cols-2 gap-4 mt-10 px-9">
+      <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div>
-          <h2 className='text-2xl '>Custom Web Design</h2>
+          <h2 className='text-4xl font-bold '>Custom Web Design</h2>
+          <p className='mt-3'>Work with an industry leading web design company to scale and smoothline your online expirience</p>
+          <ul>
+              {list.map((item, index)=>(
+                <li key={index} className='flex text-2xl gap-2' >
+                  <span className='relative mt-2 font-bold'>{item.icon}</span>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
         </div>  
         <div>
           <CardWithImageV1>
               <CardBody className="absolute px-4 pb-4 inset-0 flex flex-col justify-end size-full" />
             </CardWithImageV1>
         </div>
+        </div>
+        <div className='grid md:grid-cols-2 theme'>
+          <div>
+            <ListHover/>
+          </div>
+          <div className='grid place-content-center'>
+            <Form/>
+          </div>
         </div>
         <Slider/>
     </div>

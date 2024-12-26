@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 const Slider = () => {
   return (
-    <div className="theme">
+    <div className="bg-neutral-200">
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll down
@@ -29,7 +29,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] ">
+    <section ref={targetRef} className="relative h-[300vh] bg-neutral-200">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
@@ -45,7 +45,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className=" group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200 space-y-2"
+      className=" group relative h-[450px] w-[450px] overflow-hidden theme space-y-2"
     >
      
       <div className=" flex justify-center">
@@ -54,7 +54,7 @@ const Card = ({ card }) => {
       </span>
       </div>
       <div className="flex relative justify-center ">
-      <span className="text-center pt-2 text-2xl font-bold bg-gray-300  rounded-full w-14 h-14">{card.id} </span>
+      <span className="text-center pt-2 text-2xl font-bold bg-neutral-200  rounded-full w-14 h-14">{card.id} </span>
       </div>
       
       <div
