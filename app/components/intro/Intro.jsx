@@ -51,7 +51,7 @@ function Intro(
          
           <div className='grid md:grid-cols-2 sm:grid-cols-1 md:gap-8 sm:gap-3 px-5 text-xl text-center mt-7'>
             <div className='flex flex-col'>
-              <p className=' flex-1 text-balance'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati quasi ab. Corrupti ut laborum quam ex quisquam autem.</p>
+              <p className=' flex-1 text-balance primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati quasi ab. Corrupti ut laborum quam ex quisquam autem.</p>
             </div>
             <div className=' flex justify-center  sm:block mt-5'>
               <Image

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Image from 'next/image';
 import { Carousel } from '@/components/ui/carousel';
 import Slider from '../components/Slider';
@@ -6,15 +6,17 @@ import Form from '../components/Form';
 import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
 
+
 const cardContent = {
   title: "Lorem ipsum dolor",
   description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, hic ipsum!",
 };
-
-const webDesignItems = [
-  { text: 'Responsive Design', description: 'This is about responsive design' },
-  { text: 'UI/UX Optimization', description: 'This is about UI/UX' },
-  { text: 'SEO-Friendly Design', description: 'This is about SEO-friendly design' },
+const wordpressItems = [
+  { text: 'Custom WordPress Themes', description: 'Create a unique look and feel for your website with custom themes.' },
+  { text: 'SEO Optimized', description: 'Enhance your site’s visibility with SEO-friendly WordPress designs.' },
+  { text: 'Responsive Layouts', description: 'Ensure your WordPress site looks great on any device with a responsive layout.' },
+  { text: 'Plugin Integration', description: 'Easily extend your site’s functionality with WordPress plugins.' },
+  { text: 'Content Management', description: 'Effortlessly manage and update your content with WordPress’s intuitive dashboard.' },
 ];
 
 const CardBody = ({ className = "" }) => (
@@ -51,18 +53,18 @@ const CardWithImageV1 = ({ children }) => (
   </div>
 );
 
-function WebDesign() {
+function wordpress() {
   return (
     <div className="min-h-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
-          <h2 className='text-4xl font-bold heading'>Custom Web Design</h2>
-          <p className='mt-3 primary'>Work with an industry leading web design company to scale and smoothline your online expirience</p>
+          <h2 className='text-4xl font-bold heading '>Wordpress Web Design</h2>
+          <p className='mt-3 primary'>Work with an industry leading Wordpress web design company to scale and smoothline your online expirience</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
                 <span className="relative mt-2 font-bold">{item.icon}</span>
-                <span className='primary'>{item.text} </span> 
+                <span className='primary'>  {item.text} </span>
               </li>
             ))}
           </ul>
@@ -76,15 +78,15 @@ function WebDesign() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
-            <ListHover items={webDesignItems}/>
+            <ListHover items={wordpressItems}/>
           </div>
           <div className='grid place-content-center'>
             <Form/>
           </div>
         </div>
-        <Slider/>
-    </div>
-  );
+      <Slider/>
+  </div>
+  )
 }
 
-export default WebDesign;
+export default wordpress 

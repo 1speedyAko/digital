@@ -5,17 +5,25 @@ import Slider from '../components/Slider';
 import Form from '../components/Form';
 import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
+import wordpress from '../wordpress/page';
 
 const cardContent = {
   title: "Lorem ipsum dolor",
   description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, hic ipsum!",
 };
 
-const webDesignItems = [
-  { text: 'Responsive Design', description: 'This is about responsive design' },
-  { text: 'UI/UX Optimization', description: 'This is about UI/UX' },
-  { text: 'SEO-Friendly Design', description: 'This is about SEO-friendly design' },
+const ecommerceItems = [
+  { text: 'Custom Store Design', description: 'Create a unique and engaging look for your eCommerce store with custom designs.' },
+  { text: 'Product Management', description: 'Easily manage your products, inventory, and categories in your eCommerce store.' },
+  { text: 'Secure Payment Integration', description: 'Ensure safe and reliable payment methods for your customers.' },
+  { text: 'SEO Optimized for Products', description: 'Improve your store’s visibility and ranking with SEO-friendly product pages.' },
+  { text: 'Mobile-Responsive Layout', description: 'Make sure your store looks great and works smoothly on mobile devices.' },
+  { text: 'Customer Management', description: 'Manage customer accounts, orders, and profiles efficiently.' },
+  { text: 'Order Tracking', description: 'Allow customers to track their orders easily with real-time updates.' },
+  { text: 'Multi-Currency Support', description: 'Sell globally with support for multiple currencies and languages.' },
 ];
+
+
 
 const CardBody = ({ className = "" }) => (
   <div className={`px-2 text-gray-100 sm:px-4 py-0 sm:pb-3 text-left ${className}`}>
@@ -51,7 +59,7 @@ const CardWithImageV1 = ({ children }) => (
   </div>
 );
 
-function WebDesign() {
+function Ecommerce() {
   return (
     <div className="min-h-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
@@ -76,7 +84,7 @@ function WebDesign() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
-            <ListHover items={webDesignItems}/>
+            <ListHover items={ecommerceItems}/>
           </div>
           <div className='grid place-content-center'>
             <Form/>
@@ -87,4 +95,4 @@ function WebDesign() {
   );
 }
 
-export default WebDesign;
+export default Ecommerce;

@@ -1,17 +1,22 @@
+'use client'
 import React from "react";
 import Intro from "../intro/Intro";
 import Texts from "../text/Info";
 import Image from "next/image";
 import HoverDevCards from "../Nutshel";
+import { useRouter } from "next/navigation";
+
 
 function Body() {
+    const router = useRouter()
     // JSON data directly within the component
     const cards = [
         {
             title: "Web Design",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati?",
             imageURL: "https://plus.unsplash.com/premium_photo-1678566153919-86c4ba4216f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww",
-            buttonText: "See More"
+            buttonText: "See More",
+            route:"/webdesign",
         },
         {
             title: "Email Marketing",
@@ -53,9 +58,13 @@ function Body() {
                         <div className="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
                             <h1 className="font-dmserif text-3xl font-bold text-white">{card.title}</h1>
                             <p className="text-lg italic text-white mb-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{card.description}</p>
-                            <button className="font-com rounded-full shadow shadow-black/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white">
+                            <button
+                                className="font-com rounded-full shadow shadow-black/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white hover:bg-neutral-800 active:bg-neutral-700 active:scale-95 transition transform duration-150"
+                                onClick={() => router.push(card.route)}
+                            >
                                 {card.buttonText}
                             </button>
+
                         </div>
                     </div>
                 ))}

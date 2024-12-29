@@ -1,13 +1,12 @@
 // page.js
 import React from "react";
 import Body from "./components/Body/page";
-import Texts from "./components/text/Info";
+
 
 function Page() {
   return (
     <div className="flex flex-col gap-10">
       <Body />
-      {/* <Texts /> */}
     </div>
   );
 }

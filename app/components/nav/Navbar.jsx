@@ -135,16 +135,16 @@ const Navbar = () => {
               {open&&(
        <div className="space-y-8 text-center text-sm py-1">
        <div className="text-sm">
-         <h3 className="font-semibold text-gray-800 mb-2">Graphic Design</h3>
+         <h3 className="font-semibold text-gray-800 mb-2">Branding</h3>
          <ul className="space-y-2">
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Business Cards</a>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Business Cards</Link>
            </li>
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Flyers</a>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Logo Design</Link>
            </li>
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Posters</a>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Graphic Design</Link>
            </li>
          </ul>
        </div>
@@ -153,25 +153,34 @@ const Navbar = () => {
          <h3 className="font-semibold text-gray-800 mb-2">Web Design</h3>
          <ul className="space-y-2">
            <li>
-             <Link href="/webdesign" className="text-sm text-gray-600 hover:text-indigo-500">Custom Web Design</Link>
+             <Link href="/webdesign" className="text-sm text-gray-600 hover:text-indigo-500">Custom Website Design</Link>
            </li>
            <li>
-             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">SEO</Link>
+             <Link href="/wordpress" className="text-sm text-gray-600 hover:text-indigo-500"> WordPress Website Design</Link>
            </li>
+           {/* <li>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Webflow Website Design</Link>
+           </li> */}
+           {/* <li>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">WooCommerce Website Design</Link>
+           </li> */}
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Ads and Content Marketing</a>
+             <Link href="ecommerce" className="text-sm text-gray-600 hover:text-indigo-500">eCommerce Website Design</Link>
            </li>
+           {/* <li>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Shopify Website Design</Link>
+           </li> */}
          </ul>
        </div>
        
        <div>
-         <h3 className="font-semibold text-gray-800 mb-2">Branding</h3>
+         <h3 className="font-semibold text-gray-800 mb-2">Marketing</h3>
          <ul className="space-y-2">
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Logo Design</a>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Search Engine Optimization</a>
            </li>
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Brand Guidelines</a>
+             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Social Media Marketing</a>
            </li>
            <li>
              <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Social Media Branding</a>
@@ -227,9 +236,10 @@ const AboutFlyout = () => {
       className="absolute left-[-630%] transform -translate-x-1/2 top-full mt-8  w-[600px] bg-white shadow-lg p-6 z-50  "
       // style={{ left: "translateX(-20px)" }}
     >
+
       {/* Arrow pointing to the button */}
       <div className="absolute left-1/2  top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-
+      <div className="bg-transparent absolute -top-6 left-0 right-0 h-6"></div>
       <div className="grid grid-cols-2 gap-6 ">
         {/* Left Section - About Us */}
         <div className="flex-1 bg-amber-100">
@@ -282,9 +292,9 @@ const ServicesFlyout = () => {
     >
       {/* Arrow pointing to the button */}
       <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-
-      <div className="grid grid-cols-3 gap-6 relative ml-14">
-      <div>
+      <div className="bg-transparent absolute -top-6 left-0 right-0 h-6"></div>
+      <div className="grid grid-cols-3 gap-4 relative ml-12 gap-y-0">
+      <div className=" text-white">
         <h3 className="font-semibold text-gray-800">Graphic design</h3>
         <ul className="mt-2 space-y-2">
           <li>
@@ -307,21 +317,24 @@ const ServicesFlyout = () => {
       <div>
         <h3 className="font-semibold text-gray-800">Web development</h3>
         <ul className="mt-2 space-y-2">
-          <li>
-            <Link href="/webdesign" className="text-sm text-gray-600 hover:text-indigo-500">
-              Web Design
-            </Link>
-          </li>
-          <li>
-           <Link href="/seo" className="text-sm text-gray-600 hover:text-indigo-500">
-              seo
-            </Link>
-          </li>
-          <li>
-            <Link href="/content" className="text-sm text-gray-600 hover:text-indigo-500">
-              Ads & content marketing
-            </Link>
-          </li>
+        <li>
+             <Link href="/webdesign" className="text-sm text-gray-600 hover:text-indigo-500">Custom Website Design</Link>
+           </li>
+           <li>
+             <Link href="/wordpress" className="text-sm text-gray-600 hover:text-indigo-500"> WordPress Web Design</Link>
+           </li>
+           {/* <li>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Webflow Web Design</Link>
+           </li> */}
+           {/* <li>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">WooCommerce Web Design</Link>
+           </li> */}
+           <li>
+             <Link href="ecommerce" className="text-sm text-gray-600 hover:text-indigo-500">eCommerce Web Design</Link>
+           </li>
+           {/* <li>
+             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Shopify Web Design</Link>
+           </li> */}
         </ul>
       </div>
       <div>
@@ -345,10 +358,6 @@ const ServicesFlyout = () => {
         </ul>
       </div>
     </div>
-
-      <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500">
-        Explore Services
-      </button>
     </motion.div>
   );
 };
