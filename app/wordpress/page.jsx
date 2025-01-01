@@ -57,7 +57,7 @@ const CardWithImageV1 = ({ children }) => (
   </div>
 );
 
-function wordpress() {
+function Wordpress() {
   const {setIsLoading} =useLoading()
      useEffect(() => {
         // Set loading state when the component mounts
@@ -105,4 +105,4 @@ function wordpress() {
   )
 }
 
-export default wordpress 
+export default Wordpress 
