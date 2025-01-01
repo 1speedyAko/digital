@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { IoLinkOutline } from "react-icons/io5";
@@ -12,9 +12,31 @@ const Navbar = () => {
   const [openFlyout, setOpenFlyout] = useState(null);
   const [openArrow, setOpenArrow] = useState(false)
   const [open, setOpen] = useState(false)
+  const [isTablet, setIsTablet]=useState(false)
 
-  const handleMouseEnter = (menu) => setOpenFlyout(menu);
-  const handleMouseLeave = () => setOpenFlyout(null);
+
+  useEffect(() => {
+    const handleResize = () => setIsTablet(window.innerWidth >= 768 && window.innerWidth <= 1024);
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleFlyout = (menu) => {
+    if (isTablet) {
+      setOpenFlyout((prev) => (prev === menu ? null : menu));
+    }
+  };
+
+  const handleMouseEnter = (menu) => {
+    if (!isTablet) setOpenFlyout(menu);
+  };
+
+  const handleMouseLeave = () => {
+    if (!isTablet) setOpenFlyout(null);
+  };
+  // const handleMouseEnter = (menu) => setOpenFlyout(menu);
+  // const handleMouseLeave = () => setOpenFlyout(null);
 
   const dropdown = () => {
     setOpenArrow((prev)=>!prev)
@@ -23,6 +45,7 @@ const Navbar = () => {
   const serviceDropDown = () =>{
     setOpen((prev)=>!prev)
   }
+  
 
   return (
     <nav className="relative  shadow-md z-50 ">
@@ -33,28 +56,26 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 justify-center w-full ">
           <NavLink href="/" className="text-gray-200">Home</NavLink>
-          <NavLink href="/about" onMouseEnter={() => handleMouseEnter("about")} onMouseLeave={handleMouseLeave}
-           className='relative'>
+          <NavLink
+            href="/about"
+            onMouseEnter={() => handleMouseEnter("about")}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => toggleFlyout("about")}
+            className="relative"
+          >
             About
-           
             <HoverLine active={openFlyout === "about"} />
-            <AnimatePresence>
-              {openFlyout === "about" && <AboutFlyout />}
-            </AnimatePresence>
+            <AnimatePresence>{openFlyout === "about" && <AboutFlyout />}</AnimatePresence>
           </NavLink>
-          <NavLink>
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("services")}
-              onMouseLeave={handleMouseLeave}
-             >
-              <button className="relative  ">
-                Services
-                <HoverLine active={openFlyout === "services"} />
-              </button>
-              <AnimatePresence>
-                {openFlyout === "services" && <ServicesFlyout />}
-              </AnimatePresence>
+          <NavLink
+            onMouseEnter={() => handleMouseEnter("services")}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => toggleFlyout("services")}
+          >
+            <div className="relative">
+              <button className="relative">Services</button>
+              <HoverLine active={openFlyout === "services"} />
+              <AnimatePresence>{openFlyout === "services" && <ServicesFlyout />}</AnimatePresence>
             </div>
           </NavLink>
           <NavLink href="/contact" className="text-gray-200">Contact</NavLink>
@@ -204,12 +225,13 @@ const Navbar = () => {
   );
 };
 
-const NavLink = ({ href, children, onMouseEnter, onMouseLeave }) => (
+const NavLink = ({ href, children, onMouseEnter, onMouseLeave, onClick }) => (
   <a
     href={href}
     className="relative text-gray-50 hover:text-gray-200 transition-colors"
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
+    onClick={onClick}
   >
     {children}
     <HoverLine />
@@ -293,9 +315,9 @@ const ServicesFlyout = () => {
       {/* Arrow pointing to the button */}
       <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
       <div className="bg-transparent absolute -top-6 left-0 right-0 h-6"></div>
-      <div className="grid grid-cols-3 gap-4 relative ml-12 gap-y-0">
-      <div className=" text-white">
-        <h3 className="font-semibold text-gray-800">Graphic design</h3>
+      <div className="grid grid-cols-3 gap-2 relative justify-center gap-y-0">
+      <div className=" text-white ml-9">
+        <h3 className="font-semibold text-gray-800">Branding</h3>
         <ul className="mt-2 space-y-2">
           <li>
             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
@@ -304,17 +326,17 @@ const ServicesFlyout = () => {
           </li>
           <li>
             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-              Flyers
+              Graphic Design
             </a>
           </li>
           <li>
             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-              Posters
+              Logo Design
             </a>
           </li>
         </ul>
       </div>
-      <div>
+      <div className="">
         <h3 className="font-semibold text-gray-800">Web development</h3>
         <ul className="mt-2 space-y-2">
         <li>
@@ -338,21 +360,21 @@ const ServicesFlyout = () => {
         </ul>
       </div>
       <div>
-        <h3 className="font-semibold text-gray-800">Branding</h3>
+        <h3 className="font-semibold text-gray-800">Marketing</h3>
         <ul className="mt-2 space-y-2">
           <li>
             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-              Logo Design
+              Social Media Marketing
             </a>
           </li>
           <li>
             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-              Brand Guidelines
+              Search Engine Optimization
             </a>
           </li>
           <li>
             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-              Social Media Branding
+             Paid Ads and Brand Marketing
             </a>
           </li>
         </ul>

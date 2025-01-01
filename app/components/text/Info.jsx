@@ -18,7 +18,7 @@ function Texts() {
             </TextFade>
             <TextFade>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolore impedit facilis assumenda minima officia quod reprehenderit rem fugiat consequatur adipisci nemo voluptatem ea recusandae quis tenetur, velit iusto fuga?
+              At Digital Cecara, we specialize in elevating your brand to new heights through strategic digital marketing. By utilizing advanced marketing tools and harnessing the power of social media, we create impactful online campaigns that boost visibility, engage audiences, and drive measurable growth for your business.
               </p>
             </TextFade>
           </div>
@@ -50,8 +50,7 @@ function Texts() {
             </TextFade>
             <TextFade>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error placeat saepe laboriosam praesentium excepturi veritatis. Eos omnis tempore maiores sed, perferendis earum excepturi laboriosam quis libero alias quo repellat.
-              </p>
+              We collaborate closely with our clients to deliver modern, custom-designed websites that align seamlessly with your brand guidelines. By enhancing your digital presence, we help you connect with a broader audience and create a lasting impact online              </p>
             </TextFade>
           </div>
         </div>
@@ -64,8 +63,7 @@ function Texts() {
             </TextFade>
             <TextFade>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In deserunt vel nulla autem odit id iste asperiores sunt dolor ad suscipit tempora sed, quis quos, cupiditate dolore accusamus at ab?
-              </p>
+              Our team of experienced graphic designers is dedicated to creating unique and impactful brand identities tailored to your vision. By engaging you in the design process, we ensure your branding aligns with your goals, enhancing recognition and driving success.              </p>
             </TextFade>
           </div>
           <div className="text-center flex items-center justify-center">

@@ -1,32 +1,53 @@
 'use client'
 
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useLoading } from "../components/LoadingContext";
 
 const TextParallaxContentExample = () => {
+  const { setIsLoading } = useLoading();
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Simulate loading for 2 seconds
+
+    return () => clearTimeout(timer);
+  }, [setIsLoading]);
   return (
-    <div className=" pt-16 ">
+    <div className="pt-16">
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Collaborate"
-        heading="Built for all of us."
+        subheading="Digital Cecara"
+        heading="About Us"
       >
-        <ExampleContent />
+        <ExampleContent
+          title="Who are we?"
+          text="We are a team of passionate professionals committed to helping businesses thrive in the digital space. From digital marketing to web development and graphic design, we provide tailored solutions that elevate your brand and drive measurable results."
+        />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading="Quality"
-        heading="Never compromise."
+        heading="commitment"
       >
-        <ExampleContent />
+        <ExampleContent
+          title="Our Commitment"
+          text="We prioritize quality in everything we do. From the design process to implementation, our goal is to deliver excellence and ensure your business stands out in the competitive digital landscape."
+        />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Modern"
-        heading="Dress for the best."
+        subheading="?"
+        heading="why choose us"
       >
-        <ExampleContent />
+        <ExampleContent
+          title="Why Choose Us?"
+          text="We combine modern aesthetics with advanced technology to create solutions that reflect your brand's vision and resonate with your audience."
+        />
       </TextParallaxContent>
     </div>
   );
@@ -111,25 +132,13 @@ const OverlayCopy = ({ subheading, heading }) => {
   );
 };
 
-const ExampleContent = () => (
+const ExampleContent = ({ title, text }) => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-16 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-      Additional content explaining the above card here
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 heading">
+      {title}
     </h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
-      </p>
-      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-        Learn more <FiArrowUpRight className="inline" />
-      </button>
+      <p className="mb-4 text-xl primary md:text-2xl">{text}</p>
     </div>
   </div>
 );

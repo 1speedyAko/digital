@@ -1,10 +1,14 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import { Carousel } from '@/components/ui/carousel';
 import Slider from '../components/Slider';
 import Form from '../components/Form';
 import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
+import { useLoading } from '../components/LoadingContext';
+
+
 
 
 const cardContent = {
@@ -54,6 +58,18 @@ const CardWithImageV1 = ({ children }) => (
 );
 
 function wordpress() {
+  const {setIsLoading} =useLoading()
+     useEffect(() => {
+        // Set loading state when the component mounts
+        setIsLoading(true);
+    
+        // Mimic actual loading tasks
+        const timer = setTimeout(() => {
+          setIsLoading(false);
+        }, 2000); // Replace with actual loading time if needed
+    
+        return () => clearTimeout(timer); // Cleanup timer
+      }, [setIsLoading]);
   return (
     <div className="min-h-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">

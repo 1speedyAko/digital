@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
+import { useLoading } from "./LoadingContext";
 
-const Example = () => {
+const FramerLoader = () => {
+  const { isLoading } = useLoading();
+
+  if (!isLoading) return null;
+
   return (
-    <div className="grid place-content-center  px-4 py-24">
+    <div className="fixed inset-0 grid place-content-center bg-black bg-opacity-50 z-50">
       <BarLoader />
     </div>
   );
@@ -38,10 +43,8 @@ const BarLoader = () => {
       <motion.div variants={variants} className="h-12 w-2 bg-white" />
       <motion.div variants={variants} className="h-12 w-2 bg-white" />
       <motion.div variants={variants} className="h-12 w-2 bg-white" />
-      <motion.div variants={variants} className="h-12 w-2 bg-white" />
-      <motion.div variants={variants} className="h-12 w-2 bg-white" />
     </motion.div>
   );
 };
 
-export default Example;
+export default FramerLoader;

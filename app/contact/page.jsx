@@ -1,9 +1,24 @@
+"use client"
+import React,{useState, useEffect} from "react";
+import { useLoading } from "../components/LoadingContext";
+
+
 export default function Contact() {
+  const { setIsLoading } = useLoading();
+  useEffect(() => {
+      setIsLoading(true);
+  
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 2000); // Simulate loading for 2 seconds
+  
+      return () => clearTimeout(timer);
+    }, [setIsLoading]);
   return (
     <div className="min-h-screen ">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-6">Get in Touch</h1>
-        <p className="text-center text-gray-600 mb-12">
+        <h1 className="text-4xl font-bold text-center mb-6 heading">Get in Touch</h1>
+        <p className="text-center text-gray-600 mb-12 primary">
           We&apos;re here to help. Fill out the form below or contact us directly.
         </p>
 
@@ -29,17 +44,20 @@ export default function Contact() {
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
               <textarea id="message" rows="5" className="mt-1 block w-full border border-gray-300 rounded-md p-2" required></textarea>
             </div>
-            <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Submit</button>
+            <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-md group hover:bg-blue-700">
+              Submit
+            </button>
+
           </form>
 
           <div className="space-y-8">
             <div>
-              <h2 className="text-lg font-semibold">Contact Information</h2>
+              <h2 className="text-lg font-semibold heading">Contact Information</h2>
               <p className="text-gray-200">Phone: +1 (800) 123-4567</p>
               <p className="text-gray-200">Email: contact@yourwebsite.com</p>
             </div>
             <div>
-              <h2 className="text-lg font-semibold">Location</h2>
+              <h2 className="text-lg font-semibold heading">Location</h2>
               <p className="text-gray-200">123 Main Street, New York, NY 10001</p>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63948.78546979284!2d34.688615232812465!3d-0.09170224925494462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178101bca3df0ad7%3A0x94c15a96d8d75837!2sKisumu%2C%20Kenya!5e0!3m2!1sen!2sus!4v1696247974567!5m2!1sen!2sus"

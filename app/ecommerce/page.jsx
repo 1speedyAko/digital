@@ -1,11 +1,13 @@
-import React from 'react';
+"use client"
+import React, { useEffect } from 'react';
 import Image from 'next/image';
-import { Carousel } from '@/components/ui/carousel';
 import Slider from '../components/Slider';
 import Form from '../components/Form';
 import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
-import wordpress from '../wordpress/page';
+import { useLoading } from '../components/LoadingContext';
+
+
 
 const cardContent = {
   title: "Lorem ipsum dolor",
@@ -41,6 +43,7 @@ const list = [
 ]
 
 
+
 const CardWithImageV1 = ({ children }) => (
   <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group">
     <Image
@@ -59,7 +62,21 @@ const CardWithImageV1 = ({ children }) => (
   </div>
 );
 
+  
 function Ecommerce() {
+  const { setIsLoading } = useLoading();
+
+  useEffect(() => {
+    // Set loading state when the component mounts
+    setIsLoading(true);
+
+    // Mimic actual loading tasks
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Replace with actual loading time if needed
+
+    return () => clearTimeout(timer); // Cleanup timer
+  }, [setIsLoading]);
   return (
     <div className="min-h-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">

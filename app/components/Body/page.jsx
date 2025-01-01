@@ -1,19 +1,29 @@
 'use client'
-import React from "react";
+import React,{useEffect} from "react";
 import Intro from "../intro/Intro";
 import Texts from "../text/Info";
 import Image from "next/image";
 import HoverDevCards from "../Nutshel";
 import { useRouter } from "next/navigation";
-
+import { useLoading } from "../LoadingContext";
 
 function Body() {
     const router = useRouter()
-    // JSON data directly within the component
+    const { setIsLoading } = useLoading();
+    
+      useEffect(() => {
+        setIsLoading(true);
+    
+        const timer = setTimeout(() => {
+          setIsLoading(false);
+        }, 2000); // Simulate loading for 2 seconds
+    
+        return () => clearTimeout(timer);
+      }, [setIsLoading]);
     const cards = [
         {
             title: "Web Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati?",
+            description: "Custom Web Design , tailored for your specific needs and brand guidelines.",
             imageURL: "https://plus.unsplash.com/premium_photo-1678566153919-86c4ba4216f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww",
             buttonText: "See More",
             route:"/webdesign",
@@ -38,7 +48,7 @@ function Body() {
 
         <Intro/>
 
-        <div className="flex min-h-screen   items-center justify-center relative w-full pt-64">
+        <div className="flex min-h-screen   items-center justify-center relative w-full pt-64 ">
           
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
                 {cards.map((card, index) => (

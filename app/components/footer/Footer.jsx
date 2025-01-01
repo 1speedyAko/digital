@@ -10,7 +10,9 @@ import {
   FaTwitter,
   FaYoutube,
   FaLinkedin,
+  FaServicestack
 } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -34,10 +36,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2">
-                <Link href="/services" className="hover:text-gray-400">
-                  <FaInfoCircle className="inline-block mr-2" />
+                <a  className="hover:text-gray-400">
+                  <FaServicestack className="inline-block mr-2" />
                   Services
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
