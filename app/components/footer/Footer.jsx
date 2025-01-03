@@ -35,12 +35,12 @@ const Footer = () => {
                   About
                 </Link>
               </li>
-              <li className="mb-2">
+              {/* <li className="mb-2">
                 <a  className="hover:text-gray-400">
                   <FaServicestack className="inline-block mr-2" />
                   Services
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
           {/* Services */}

@@ -104,7 +104,7 @@ const Navbar = () => {
           >
             <div className="p-4">
               <button
-                className="text-gray-800 font-bold text-lg mb-4"
+                className="text-gray-800 font-bold text-2xl mb-4"
                 onClick={() => setMenuOpen(false)}
               >
                 <AiOutlineClose />
@@ -124,21 +124,30 @@ const Navbar = () => {
                 <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-gray-100 rounded-md shadow-sm">
-                  <Link href="/features">
-                    <h4 className="font-semibold text-gray-800">Features</h4>
+                  <Link href="/about">
+                    <h4 className="font-semibold text-gray-800 text-sm">Commitment</h4>
                   </Link>
                 </div>
       
                   <div className="p-4 bg-gray-100 rounded-md shadow-sm">
-                    <h4 className="font-semibold text-gray-800">Testimonials</h4>
+                    <Link href='/about'>
+                     <h4 className="font-semibold text-gray-800 text-sm">About Us</h4>
+                    </Link>
+                    
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 bg-gray-100 rounded-md shadow-sm">
-                    <h4 className="font-semibold text-gray-800">Team</h4>
+                    <Link href='/about'>
+                     <h4 className="font-semibold text-gray-800">Team</h4>
+                    </Link>
+                    
                   </div>
                   <div className="p-4 bg-gray-100 rounded-md shadow-sm">
+                    <Link href='/about'>
                     <h4 className="font-semibold text-gray-800">Partners</h4>
+                     </Link>
+                   
                   </div>
                 </div>
               </div>
@@ -156,7 +165,7 @@ const Navbar = () => {
               {open&&(
        <div className="space-y-8 text-center text-sm py-1">
        <div className="text-sm">
-         <h3 className="font-semibold text-gray-800 mb-2">Branding</h3>
+         <h3 className="font-bold text-gray-800 mb-2">Branding</h3>
          <ul className="space-y-2">
            <li>
              <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Business Cards</Link>
@@ -171,7 +180,7 @@ const Navbar = () => {
        </div>
        
        <div>
-         <h3 className="font-semibold text-gray-800 mb-2">Web Design</h3>
+         <h3 className="font-bold text-gray-800 mb-2">Web Design</h3>
          <ul className="space-y-2">
            <li>
              <Link href="/webdesign" className="text-sm text-gray-600 hover:text-indigo-500">Custom Website Design</Link>
@@ -195,7 +204,7 @@ const Navbar = () => {
        </div>
        
        <div>
-         <h3 className="font-semibold text-gray-800 mb-2">Marketing</h3>
+         <h3 className="font-bold text-gray-800 mb-2">Marketing</h3>
          <ul className="space-y-2">
            <li>
              <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Search Engine Optimization</a>
