@@ -1,26 +1,24 @@
-'use client'
+'use client';
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
-const Slider = () => {
+const Slider = ({ title, processSteps, FooterText }) => {
   return (
     <div className="bg-neutral-200">
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll down
-        </span>
+      <div className="flex h-11 items-center justify-center">
+        <span className="font-bold uppercase text-xl mt-20 ">{title}</span>
       </div>
-      <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
+      <HorizontalScrollCarousel cards={processSteps} />
+      <div className="flex h-11 items-center justify-center">
+        <span className="font-semibold uppercase bg-transparent">
+          {FooterText}
         </span>
       </div>
     </div>
   );
 };
 
-const HorizontalScrollCarousel = () => {
+const HorizontalScrollCarousel = ({ cards }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -29,12 +27,12 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-200">
+    <section ref={targetRef} className="relative h-[200vh] bg-transparent">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
+          {cards.map((card) => (
+            <Card card={card} key={card.id} />
+          ))}
         </motion.div>
       </div>
     </section>
@@ -45,18 +43,31 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className=" group relative h-[450px] w-[450px] overflow-hidden theme space-y-2"
+      className="group relative h-[450px] w-[450px] overflow-hidden theme p-4 space-y-2"
     >
-     
-      <div className=" flex justify-center">
-      <span className="font-bold text-2xl  ">
-        {card.step}
-      </span>
+      {/* Card ID */}
+      <div className="flex justify-center">
+        <span className="text-center text-2xl font-bold bg-neutral-200 rounded-full w-14 h-14 flex items-center justify-center">
+          {card.id}
+        </span>
       </div>
-      <div className="flex relative justify-center ">
-      <span className="text-center pt-2 text-2xl font-bold bg-neutral-200  rounded-full w-14 h-14">{card.id} </span>
+
+      {/* Title */}
+      <div className="flex justify-center">
+        <h2 className="text-xl font-bold text-center heading">{card.title}</h2>
       </div>
-      
+
+      {/* Steps as a List */}
+      <div className="mt-4 space-y-2 primary">
+        {card.step.split(", ").map((line, index) => (
+          <div key={index} className="flex items-start gap-2">
+            <span className="text-lg text-neutral-500">➤</span>
+            <span>{line}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Background Image */}
       <div
         style={{
           backgroundImage: `url(${card.url})`,
@@ -65,58 +76,8 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div>
     </div>
   );
 };
 
 export default Slider;
-
-const cards = [
-  {
-    url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
-    id: 1,
-    step:'Step ',
-  },
-  {
-    url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
-    id: 2,
-    step:'Step ',
-  },
-  {
-    url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
-    id: 3,
-    step:'Step ',
-  },
-  {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
-    id: 4,
-    step:'Step ',
-  },
-  {
-    url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
-    id: 5,
-    step:'Step ',
-  },
-  {
-    url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
-    id: 6,
-    step:'Step ',
-  },
-  {
-    url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 7,
-    step:'Step ',
-  },
-];

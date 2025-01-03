@@ -58,7 +58,7 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Contact</h4>
             <p>
               <FaAddressCard className="inline-block mr-2" />
-              Sondu, Kisumu City
+              Kisumu City
             </p>
             <p className="mt-2">
               <FaPhone className="inline-block mr-2" />
@@ -76,7 +76,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="py-2 px-auto rounded-l-md focus:outline-none text-black"
+                className="py-2 pl-2 px-auto rounded-l-md focus:outline-none text-black"
               />
               <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-r-md focus:outline-none">
                 Subscribe

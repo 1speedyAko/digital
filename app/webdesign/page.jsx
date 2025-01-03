@@ -7,11 +7,58 @@ import Form from '../components/Form';
 import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
 import { useLoading } from '../components/LoadingContext';
+import Faqs from '../components/Faqs';
 
 const cardContent = {
   title: "Lorem ipsum dolor",
   description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, hic ipsum!",
 };
+
+const webDesignProcess  = [
+  {
+    heading:"Custom Web Design Process",
+    url: "/imgs/abstract/1.jpg",
+    title: "Discovery & Planning",
+    id: 1,
+    step: " Define objectives, analyze competitors, and plan the project scope.",
+  },
+  {
+    url: "/imgs/abstract/2.jpg",
+    title: "Wireframing & Prototyping",
+    id: 2,
+    step: " Sketch ideas, make basic models, and get input.",
+  },  
+  {
+    url: "/imgs/abstract/3.jpg",
+    title: "Visual Design",
+    id: 3,
+    step: "Establish branding, UI design, and ensure a mobile-first approach.",
+  },
+  {
+    url: "/imgs/abstract/4.jpg",
+    title: "Development",
+    id: 4,
+    step: " Build the frontend, backend, and integrate CMS if needed.",
+  },
+  {
+    url: "/imgs/abstract/5.jpg",
+    title: "Testing",
+    id: 5,
+    step: " Test functionality, compatibility, performance, and accessibility.",
+  },
+  {
+    url: "/imgs/abstract/6.jpg",
+    title: "Deployment",
+    id: 6,
+    step: " Set up hosting, configure the domain, optimize for SEO, and launch.",
+  },
+  {
+    url: "/imgs/abstract/7.jpg",
+    title: "Post-Launch Support",
+    id: 7,
+    step: " Maintain the website, track analytics, and implement feedback.",
+  },
+];
 
 const webDesignItems = [
   { text: 'Responsive Design', description: 'This is about responsive design' },
@@ -96,9 +143,41 @@ function WebDesign() {
             <Form/>
           </div>
         </div>
-        <Slider/>
+        <Slider 
+        
+        title="Our Custom Web Design Process"
+        processSteps={webDesignProcess}
+        FooterText="Our Custom Web Design Process"
+        />
+        <Faqs
+        title='FAQS'
+        faqs={customWebDesignFaqs}
+        />
     </div>
   );
 }
 
 export default WebDesign;
+
+const customWebDesignFaqs = [
+  {
+    text: "What is the custom web design process, and how does it work?",
+    description: "Our custom web design process includes several phases: Discovery & Planning, Wireframing & Prototyping, Visual Design, Development, Testing, Deployment, and Post-Launch Support. We work closely with you to ensure that your vision is realized at every step."
+  },
+  {
+    text: "How long will it take to complete my custom web design project?",
+    description: "The timeline for a custom web design project depends on factors like the complexity of the design, the number of pages, and any special features. Typically, a custom website can take anywhere from 4 to 12 weeks to complete, with a more detailed timeline provided at the start of the project."
+  },
+  {
+    text: "Can I provide input during the design process?",
+    description: "Absolutely! We encourage your input throughout the process. After the initial discovery phase, we present design concepts, and you can provide feedback. We want to ensure the design aligns with your brand and meets your goals."
+  },
+  {
+    text: "Will my website be mobile-friendly and responsive?",
+    description: "Yes! Every custom website we design is fully responsive, meaning it will look great and work smoothly on all devices, from desktop computers to smartphones and tablets."
+  },
+  {
+    text: "Do you provide ongoing support after my website is launched?",
+    description: "Yes, we offer ongoing maintenance and support after your website is launched. This includes updates, troubleshooting, and making necessary changes to ensure your website remains functional, secure, and up-to-date."
+  }
+];

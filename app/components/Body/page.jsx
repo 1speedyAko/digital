@@ -6,6 +6,43 @@ import Image from "next/image";
 import HoverDevCards from "../Nutshel";
 import { useRouter } from "next/navigation";
 import { useLoading } from "../LoadingContext";
+import Faqs from "../Faqs";
+
+
+const faqsHome = [
+    {
+      text: "What is web design, and why is it important for my business?",
+      description: "Web design involves creating the layout, visual appearance, and usability of a website. A well-designed website ensures your brand looks professional, attracts visitors, and converts them into customers."
+    },
+    {
+      text: "How much does your web design service cost?",
+      description: "Our web design pricing depends on the complexity of your project, the number of pages, and the features required. We offer affordable packages tailored to small businesses, startups, and enterprises. Contact us for a free quote!"
+    },
+    {
+      text: "What is a domain, and do I need one for my website?",
+      description: "A domain is the unique address where your website is found online (e.g., yourcompany.com). It’s essential for establishing your online presence, and we can help you purchase and set it up."
+    },
+    {
+      text: "How do you ensure a good relationship with your customers?",
+      description: "We prioritize transparency, open communication, and ongoing support. From the first consultation to post-launch services, we work closely with you to ensure your needs are met and your expectations are exceeded."
+    },
+    {
+      text: "Do you offer hosting services along with web design?",
+      description: "Yes, we provide reliable hosting solutions to ensure your website runs smoothly and stays online. Our hosting plans include regular backups, updates, and technical support."
+    },
+    {
+      text: "Can you redesign my existing website?",
+      description: "Absolutely! Whether your current website is outdated or needs a new look, we can revamp it to align with modern design trends and improve its performance."
+    },
+    {
+      text: "How long does it take to design a website?",
+      description: "The timeline depends on the project's scope and complexity. Typically, a standard website takes 4-6 weeks, while larger projects may require more time. We'll provide a detailed timeline during our initial consultation."
+    },
+    {
+      text: "Do you offer SEO services as part of web design?",
+      description: "Yes, we integrate basic SEO practices during the design process to ensure your website is optimized for search engines. Advanced SEO services are also available upon request."
+    },
+  ];
 
 function Body() {
     const router = useRouter()
@@ -82,7 +119,10 @@ function Body() {
         </div>
         <Texts/>
         <HoverDevCards/>
-
+        <Faqs
+        title="FAQS"
+        faqs={faqsHome}
+        />
         </div>
         
     );

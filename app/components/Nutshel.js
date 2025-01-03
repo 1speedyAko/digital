@@ -3,12 +3,13 @@ import {  FiMail, FiUsers } from "react-icons/fi";
 import { IoLayersOutline } from "react-icons/io5"
 import { FaHandshake, FaRegUser } from "react-icons/fa";
 import { CiWallet } from "react-icons/ci";
-
+import { TextFade } from "./TextFade";
 
 const HoverDevCards = () => {
   return (
+    <TextFade>
     <div className="p-4 theme">
-      <p className="text-3xl py-3 text-center font-semibold mb-2 capitalize ">Other features</p>
+      <p className="text-4xl py-3 text-center font-semibold mb-2 capitalize heading ">Other features</p>
       <div className="grid gap-4 grid-cols-2 lg:grid-cols-4 pb-10">
         <Card
           title="B2B"
@@ -26,6 +27,7 @@ const HoverDevCards = () => {
         />
       </div>
     </div>
+    </TextFade>
   );
 };
 

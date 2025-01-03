@@ -6,6 +6,7 @@ import Form from '../components/Form';
 import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
 import { useLoading } from '../components/LoadingContext';
+import Faqs from '../components/Faqs';
 
 
 
@@ -23,6 +24,52 @@ const ecommerceItems = [
   { text: 'Customer Management', description: 'Manage customer accounts, orders, and profiles efficiently.' },
   { text: 'Order Tracking', description: 'Allow customers to track their orders easily with real-time updates.' },
   { text: 'Multi-Currency Support', description: 'Sell globally with support for multiple currencies and languages.' },
+];
+
+const ecommerceProcess = [
+  {
+    heading: "E-Commerce Development Process",
+    url: "/imgs/ecommerce/1.jpg",
+    title: "Research & Planning",
+    id: 1,
+    step: "Analyze target audience, competitors, and market trends. Define goals and platform requirements.",
+  },
+  {
+    url: "/imgs/ecommerce/2.jpg",
+    title: "Wireframing & Prototyping",
+    id: 2,
+    step: "Create wireframes for key pages like home, product, and checkout. Build prototypes for user testing.",
+  },
+  {
+    url: "/imgs/ecommerce/3.jpg",
+    title: "Design",
+    id: 3,
+    step: "Develop a visually appealing UI/UX with branding elements. Focus on mobile-first design principles.",
+  },
+  {
+    url: "/imgs/ecommerce/4.jpg",
+    title: "Development",
+    id: 4,
+    step: "Set up the e-commerce platform, configure payment gateways, and build custom features.",
+  },
+  {
+    url: "/imgs/ecommerce/5.jpg",
+    title: "Product Management",
+    id: 5,
+    step: "Add and organize product listings, including images, descriptions, and pricing.",
+  },
+  {
+    url: "/imgs/ecommerce/6.jpg",
+    title: "Testing & Optimization",
+    id: 6,
+    step: "Test for usability, speed, and compatibility. Optimize SEO, page load time, and navigation.",
+  },
+  {
+    url: "/imgs/ecommerce/7.jpg",
+    title: "Launch & Growth",
+    id: 7,
+    step: "Go live and implement marketing strategies. Track analytics, improve user experience, and scale operations.",
+  },
 ];
 
 
@@ -81,7 +128,7 @@ function Ecommerce() {
     <div className="min-h-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
-          <h2 className='text-4xl font-bold heading'>Custom Web Design</h2>
+          <h2 className='text-4xl font-bold heading'>eCommerce Web Design</h2>
           <p className='mt-3 primary'>Work with an industry leading web design company to scale and smoothline your online expirience</p>
           <ul>
             {list.map((item, index) => (
@@ -107,9 +154,39 @@ function Ecommerce() {
             <Form/>
           </div>
         </div>
-        <Slider/>
+        <Slider
+        title="Our Ecommerce Web design Process"
+        processSteps={ecommerceProcess}
+        />
+        <Faqs
+        title='e-commerce FAQS'
+        faqs={ecommerceFaqs}
+        />
     </div>
   );
 }
 
 export default Ecommerce;
+
+const ecommerceFaqs = [
+  {
+    text: "How much does it cost to design an e-commerce website?",
+    description: "The cost depends on the complexity, number of pages, and features you require. We offer customized packages to fit various budgets. Contact us for a detailed quote."
+  },
+  {
+    text: "Can you integrate payment gateways into my e-commerce website?",
+    description: "Yes, we can integrate popular payment gateways like PayPal, Stripe, and others to ensure seamless and secure transactions for your customers."
+  },
+  {
+    text: "How long does it take to design and launch an e-commerce website?",
+    description: "The timeline varies based on the project scope and requirements. Typically, it takes 4-8 weeks, but we’ll provide a clear timeline after the initial consultation."
+  },
+  {
+    text: "Will my e-commerce website be mobile-friendly?",
+    description: "Absolutely! We prioritize responsive design, ensuring your website looks and functions perfectly on desktops, tablets, and mobile devices."
+  },
+  {
+    text: "Do you offer ongoing support after the website is launched?",
+    description: "Yes, we provide post-launch support to address any issues, perform updates, and offer guidance to help you manage your website effectively."
+  }
+];
