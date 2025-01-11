@@ -8,6 +8,7 @@ import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
 import { useLoading } from '../components/LoadingContext';
 import Faqs from '../components/Faqs';
+import { ExpandableCard } from '../components/ExpandableCard';
 
 const cardContent = {
   title: "Lorem ipsum dolor",
@@ -20,50 +21,50 @@ const webDesignProcess  = [
     url: "/imgs/abstract/1.jpg",
     title: "Discovery & Planning",
     id: 1,
-    step: " Define objectives, analyze competitors, and plan the project scope.",
+    step: "Our first step in the design process is to define objectives of the project,we research on the niche,competitors,and the relevant trends in your field., Duration of the project.",
   },
   {
     url: "/imgs/abstract/2.jpg",
     title: "Wireframing & Prototyping",
     id: 2,
-    step: " Sketch ideas, make basic models, and get input.",
+    step: " We then sketch the idea,determine the typography,theme,color and get the necessary input.",
   },  
   {
     url: "/imgs/abstract/3.jpg",
     title: "Visual Design",
     id: 3,
-    step: "Establish branding, UI design, and ensure a mobile-first approach.",
+    step: "In this phase we establish branding, UI design,  ensure a mobile-first approach.",
   },
   {
     url: "/imgs/abstract/4.jpg",
     title: "Development",
     id: 4,
-    step: " Build the frontend, backend, and integrate CMS if needed.",
+    step: "We then build the frontend, Backend(if needed),and if specified we integrate CMS .",
   },
   {
     url: "/imgs/abstract/5.jpg",
     title: "Testing",
     id: 5,
-    step: " Test functionality, compatibility, performance, and accessibility.",
+    step: " Test functionality and bugs, Compatibility, Test performance and loading speed .",
   },
   {
     url: "/imgs/abstract/6.jpg",
     title: "Deployment",
     id: 6,
-    step: " Set up hosting, configure the domain, optimize for SEO, and launch.",
+    step: "In the phase we set up hosting, Configure the domain(name of the website), optimize for SEO,and launch.",
   },
   {
     url: "/imgs/abstract/7.jpg",
     title: "Post-Launch Support",
     id: 7,
-    step: " Maintain the website, track analytics, and implement feedback.",
+    step: " Finaly we maintain the website, Track analytics, Implement feedback.",
   },
 ];
 
 const webDesignItems = [
-  { text: 'Responsive Design', description: 'This is about responsive design' },
-  { text: 'UI/UX Optimization', description: 'This is about UI/UX' },
-  { text: 'SEO-Friendly Design', description: 'This is about SEO-friendly design' },
+  { text: 'Responsive Design', description: 'We ensure that your custom made website is accesible to users operating on different screen sizes. So as to deliver consistent content accross different devices.' },
+  { text: 'UI/UX Optimization', description: 'We use the latest tools to design and craft your website . This ensures easier user interraction and naviagtion within the website.' },
+  { text: 'SEO-Friendly Design', description: 'Our custom web design also encompasses search engine optimization  allowing you website rank higher in search engines using the relevant keywords. ' },
 ];
 
 const CardBody = ({ className = "" }) => (
@@ -85,18 +86,18 @@ const list = [
 const CardWithImageV1 = ({ children }) => (
   <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group">
     <Image
-      src="https://media.istockphoto.com/id/533708402/vector/responsive-web-design-gadgets-over-white.jpg?s=612x612&w=0&k=20&c=8NBFJu9NSiMWF6i512u3lO14NEKO3EU-ZTOxf785tcM="
+      src="https://media.istockphoto.com/id/1371339413/photo/co-working-team-meeting-concept-businessman-using-smart-phone-and-digital-tablet-and-laptop.jpg?s=612x612&w=0&k=20&c=ysEsVw3q2axYt3oVZAuQjtHRlN3lY-U_e0ikK5yKIXQ="
       alt="Responsive web design illustration"
       placeholder="blur"
       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
       height={450} 
-      width={300}   
+      width={500}   
       className=''
       
     />
     {/* overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/60 to-stone-900/5 backdrop-blur-[2px] transition-all duration-300"></div>
-    {children}
+    {/* <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/60 to-stone-900/5 backdrop-blur-[2px] transition-all duration-300"></div>
+    {children} */}
   </div>
 );
 
@@ -137,6 +138,14 @@ function WebDesign() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
+          <h2 className='font-bold text-3xl capitalize ml-3'>Custom web Design services</h2>
+            <ExpandableCard>
+              <p className='primary ml-5'>
+              Digital Cecaras&apos;  Custom Web design is a cheap and affordable service enabling brands and businesses have a digital presence.
+              Our team of dedicated web designers will tailor your dream website according to your brand guidlines, industry and current trends. We use various technologies to achieve your custom website
+              such as react, nextjs, webflow and so on.Let us help you achieve your dream of scaling up on the digital space.
+              </p>
+            </ExpandableCard>
             <ListHover items={webDesignItems}/>
           </div>
           <div className='grid place-content-center'>

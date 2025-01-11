@@ -44,12 +44,24 @@ const SocialMediaMarketingProcess  = [
   
 ];
 
-const SeoItems = [
-  { text: 'Key Word research And optimization', description: "We conduct extensive research on the relevant keywords pertaining our clients' website, competiton and industry trends. " },
-  { text: 'Content Marketing', description: 'Digital Cecara offers content marketing solutions to brands that generates leads.By providing SEO optimized content that generates traffic to your website. ' },
-  { text: 'Technical Seo Services', description: 'This is about SEO-friendly design' },
-  { text: 'Link building', description: '   Our team uses social media plaforms to execute acivities and command a strong social media presence. We focus on building high quality' },
-  { text: 'Content Marketing', description: 'Digital Cecara provides online marketing services to enable brands sell their products and services. Using well structured marketing campaings we connect customers to your services' },
+const SocialMediaMarketingItems = [
+  {
+    text: 'Social Media Strategy Development',
+    description: 'Crafting tailored strategies that maximize your social media presence and engagement. We focus on understanding your brand’s goals to develop a responsive design that resonates with your audience.'
+  },
+  {
+    text: 'Content Creation',
+    description: 'We specialize in creating high-quality, engaging content that tells your brand story. Our team ensures your content is not only visually appealing but also optimized for an intuitive UI/UX experience.'
+  },
+  {
+    text: 'Social Media Analytics and Reporting',
+    description: 'We provide in-depth social media analytics and performance reporting to help you track the success of your campaigns. Our approach ensures that your strategy is informed by data and aligns with SEO-friendly design principles.'
+  },
+  {
+    text: 'Social Media Management',
+    description: 'Our team handles everything from content scheduling to community engagement, ensuring your social media accounts run smoothly and consistently. We apply SEO-friendly practices to your posts for maximum reach and visibility.'
+  }
+  // { text: 'Content Creation', description: 'This is about SEO-friendly design' },
 ];
 
 const CardBody = ({ className="" }) => (
@@ -62,19 +74,19 @@ const CardBody = ({ className="" }) => (
 );
 
 const list = [
-  {text:"Increase site Authority", icon:<FaCheck style={{color:'green'}}/>},
-  {text:"Attract Organic Leads", icon:<FaCheck style={{color:'green'}}/>},
-  {text:"Increase Organic Leads", icon:<FaCheck style={{color:'green'}}/>},
+  {text:"Social Media Management", icon:<FaCheck style={{color:'green'}}/>},
+  {text:"Social Media Advertising", icon:<FaCheck style={{color:'green'}}/>},
+  {text:"Digital Business Cards", icon:<FaCheck style={{color:'green'}}/>},
 ]
 
 
 const CardWithImageV1 = ({ children }) => (
   <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group">
     <Image
-      src="https://media.istockphoto.com/id/1385957068/photo/seo-search-engine-optimization-marketing-ranking-traffic-website-internet-business-technology.jpg?s=612x612&w=0&k=20&c=1IDmzJNcAl_ttoIIYE4AbXe98MKL02EiFs5b9hJnqrc="
+      src="https://media.istockphoto.com/id/470606179/photo/social-media-cubes-on-a-blackboard.jpg?s=612x612&w=0&k=20&c=xJxwbdgw-1byfgXSvGO2nSHkTHTJtAaz8YyZgTciDEc="
       alt="Responsive web design illustration"
       placeholder="blur"
-      blurDataURL="https://media.istockphoto.com/id/1371339413/photo/co-working-team-meeting-concept-businessman-using-smart-phone-and-digital-tablet-and-laptop.jpg?s=612x612&w=0&k=20&c=ysEsVw3q2axYt3oVZAuQjtHRlN3lY-U_e0ikK5yKIXQ="
+      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
       height={450} 
       width={600}   
       className=''
@@ -103,8 +115,8 @@ function SocialMediaMarketing() {
     <div className="min-h-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
-          <h2 className='text-4xl font-bold heading'>SEO Services</h2>
-          <p className='mt-3 primary'>Work with an industry leading  SEO  company to scale and boost your following.</p>
+          <h2 className='text-4xl font-bold heading'>Social Media Marketing Agency</h2>
+          <p className='mt-3 primary'>Work with an industry leading  Social Media Marketing  company to scale and get a wider audience and online following.</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
@@ -123,28 +135,29 @@ function SocialMediaMarketing() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
-            <h2 className='font-bold text-3xl capitalize ml-3'>SEO Services</h2>
+            <h2 className='font-bold text-3xl capitalize ml-3'>Social Media Marketing Services</h2>
             <ExpandableCard>
             <p className='primary ml-5'>
-              
-              Our team of passionate designers will work with you every step of the way to ensure your business card design aligns perfectly with your brand guidelines. Our design process is centered around our clients, ensuring a collaborative experience that brings your vision to life. From concept creation to the final design, we focus on delivering business cards that are not only visually stunning but also professionally crafted to leave a lasting impression. Whether you need a sleek, minimalist design or something bold and creative, we&apos;ve got you covered.
+                Our social media services are designed to help you grow your online presence, engage with your audience, and drive meaningful results. 
+                From content creation and scheduling to analytics and campaign management, we provide tailored strategies for platforms like Facebook, Instagram, Twitter, and LinkedIn.
             </p>
+
             </ExpandableCard>
-            <ListHover items={SeoItems}/>
+            <ListHover items={SocialMediaMarketingItems}/>
           </div>
           <div className='grid place-content-center'>
             <Form/>
           </div>
         </div>
-        {/* <Slider 
+        <Slider 
         
         title="Social Media Marketing Best Practices"
         processSteps={SocialMediaMarketingProcess}
         FooterText="Social Media Marketing Best Practices"
-        /> */}
+        />
         <Faqs
         title='FAQS'
-        faqs={SeoFaqs}
+        faqs={SocialMediaMarketingFaqs}
         />
     </div>
   );
@@ -152,25 +165,25 @@ function SocialMediaMarketing() {
 
 export default SocialMediaMarketing;
 
-const SeoFaqs = [
+const SocialMediaMarketingFaqs = [
   {
-    text: "What is your SEO process?",
-    description: "Our SEO process includes four key steps: Website Audit & Analysis, Keyword Research & Strategy, On-Page & Off-Page Optimization, and Performance Tracking & Reporting. We ensure your website aligns with search engine algorithms to improve rankings and drive organic traffic."
+    text: "What is your social media marketing process?",
+    description: "Our social media marketing process includes four key steps: Discovery & Strategy Development, Content Creation, Campaign Management, and Performance Analysis. We work closely with you at every stage to create campaigns that effectively engage your target audience and align with your brand goals."
   },
   {
-    text: "How long does it take to see results from SEO?",
-    description: "SEO is a long-term strategy, and results can vary based on your industry and competition. Generally, noticeable improvements in rankings and traffic occur within 3 to 6 months, with sustained efforts leading to significant long-term growth."
+    text: "How long does it take to see results from social media marketing?",
+    description: "The timeline for seeing results depends on your goals and the platforms used. On average, clients start noticing engagement improvements within the first month, while significant growth and conversions typically occur over 3 to 6 months with consistent effort."
   },
   {
-    text: "Can I provide input during the SEO process?",
-    description: "Absolutely! Your input is vital. We collaborate with you to understand your business goals, target audience, and preferred keywords. Your insights help us craft a strategy tailored to your specific needs."
+    text: "Can I provide input during the campaign process?",
+    description: "Absolutely! Your input is crucial. We collaborate with you to understand your goals, preferences, and target audience during the strategy phase, and we regularly share updates for your feedback throughout the campaign."
   },
   {
-    text: "Will my SEO strategy align with my brand identity?",
-    description: "Yes, we ensure that all SEO efforts, including content creation and optimization, align with your brand identity. We maintain consistency in tone, style, and messaging to reflect your brand's values and appeal to your audience."
+    text: "Will my social media content match my brand identity?",
+    description: "Yes, all content we create is custom-made to reflect your brand identity. We ensure consistency with your logo, color palette, tone of voice, and overall brand style to create a cohesive online presence."
   },
   {
-    text: "What types of reports will I receive for my SEO campaigns?",
-    description: "You’ll receive comprehensive reports that include metrics such as keyword rankings, organic traffic, backlink profiles, and conversion rates. These reports provide actionable insights to track progress and refine your SEO strategy."
+    text: "What types of reports will I receive for my campaigns?",
+    description: "You’ll receive detailed reports that include key metrics such as engagement rates, follower growth, website traffic, and conversions. We provide insights and recommendations to help you understand the performance of your campaigns and refine your strategy."
   }
 ];

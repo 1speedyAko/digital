@@ -88,12 +88,12 @@ const list = [
 const CardWithImageV1 = ({ children }) => (
   <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group">
     <Image
-      src="https://media.istockphoto.com/id/533708402/vector/responsive-web-design-gadgets-over-white.jpg?s=612x612&w=0&k=20&c=8NBFJu9NSiMWF6i512u3lO14NEKO3EU-ZTOxf785tcM="
+      src="https://media.istockphoto.com/id/458090181/photo/wordpress.jpg?s=612x612&w=0&k=20&c=QdBAHZDxajvAKhqxfvG8ouSO1c1yQHFPjf5Vr4NGhk8="
       alt="Responsive web design illustration"
       placeholder="blur"
       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
       height={450} 
-      width={300}   
+      width={600}   
       className=''
       
     />

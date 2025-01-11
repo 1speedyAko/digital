@@ -57,15 +57,15 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8 justify-center w-full ">
           <NavLink href="/" className="text-gray-200">Home</NavLink>
           <NavLink
-            href="/about"
             onMouseEnter={() => handleMouseEnter("about")}
             onMouseLeave={handleMouseLeave}
             onClick={() => toggleFlyout("about")}
-            className="relative"
           >
-            About
-            <HoverLine active={openFlyout === "about"} />
-            <AnimatePresence>{openFlyout === "about" && <AboutFlyout />}</AnimatePresence>
+            <div className="relative">
+              <button className="relative">About</button>
+              <HoverLine active={openFlyout === "about"} />
+              <AnimatePresence>{openFlyout === "about" && <AboutFlyout />}</AnimatePresence>
+            </div>
           </NavLink>
           <NavLink
             onMouseEnter={() => handleMouseEnter("services")}
@@ -168,13 +168,13 @@ const Navbar = () => {
          <h3 className="font-bold text-gray-800 mb-2">Branding</h3>
          <ul className="space-y-2">
            <li>
-             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Business Cards</Link>
+             <Link href="bcards" className="text-sm text-gray-600 hover:text-indigo-500">Business Cards</Link>
            </li>
            <li>
-             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Logo Design</Link>
+             <Link href="logo" className="text-sm text-gray-600 hover:text-indigo-500">Logo Design</Link>
            </li>
            <li>
-             <Link href="#" className="text-sm text-gray-600 hover:text-indigo-500">Graphic Design</Link>
+             <Link href="gdesign" className="text-sm text-gray-600 hover:text-indigo-500">Graphic Design</Link>
            </li>
          </ul>
        </div>
@@ -207,13 +207,13 @@ const Navbar = () => {
          <h3 className="font-bold text-gray-800 mb-2">Marketing</h3>
          <ul className="space-y-2">
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Search Engine Optimization</a>
+             <Link href="/seo" className="text-sm text-gray-600 hover:text-indigo-500">Search Engine Optimization</Link>
            </li>
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Social Media Marketing</a>
+             <Link href="/social_media" className="text-sm text-gray-600 hover:text-indigo-500">Social Media Marketing</Link>
            </li>
            <li>
-             <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">Social Media Branding</a>
+             <a href="/digitalm" className="text-sm text-gray-600 hover:text-indigo-500">Social Media Branding</a>
            </li>
          </ul>
        </div>
@@ -329,17 +329,17 @@ const ServicesFlyout = () => {
         <h3 className="font-semibold text-gray-800">Branding</h3>
         <ul className="mt-2 space-y-2">
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+            <a href="bcards" className="text-sm text-gray-600 hover:text-indigo-500">
               Business Cards
             </a>
           </li>
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+            <a href="gdesign" className="text-sm text-gray-600 hover:text-indigo-500">
               Graphic Design
             </a>
           </li>
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+            <a href="logo" className="text-sm text-gray-600 hover:text-indigo-500">
               Logo Design
             </a>
           </li>
@@ -372,19 +372,19 @@ const ServicesFlyout = () => {
         <h3 className="font-semibold text-gray-800">Marketing</h3>
         <ul className="mt-2 space-y-2">
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+            <Link href="/social_media" className="text-sm text-gray-600 hover:text-indigo-500">
               Social Media Marketing
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
+            <Link href="/seo" className="text-sm text-gray-600 hover:text-indigo-500">
               Search Engine Optimization
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-indigo-500">
-             Paid Ads and Brand Marketing
-            </a>
+            <Link href="/digitalm" className="text-sm text-gray-600 hover:text-indigo-500">
+             Brand Marketing
+            </Link>
           </li>
         </ul>
       </div>

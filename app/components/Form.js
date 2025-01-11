@@ -58,7 +58,7 @@ function Form() {
   }
 
   return (
-    <div className="p-3">
+    <div className="p-3 py-10">
       <form onSubmit={handleSubmit} className="flex justify-center p-4 border-4 w-[350px] bg-neutral-200">
         <div className="grid grid-cols-1 gap-5 bg-neutral-200">
           <h3>Request a Quote</h3>

@@ -94,18 +94,18 @@ const list = [
 const CardWithImageV1 = ({ children }) => (
   <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group">
     <Image
-      src="https://media.istockphoto.com/id/533708402/vector/responsive-web-design-gadgets-over-white.jpg?s=612x612&w=0&k=20&c=8NBFJu9NSiMWF6i512u3lO14NEKO3EU-ZTOxf785tcM="
+      src="https://media.istockphoto.com/id/1249219777/photo/shopping-online-concept-parcel-or-paper-cartons-with-a-shopping-cart-logo-in-a-trolley-on-a.jpg?s=612x612&w=0&k=20&c=EWKEahyVLY8iAHyirCCDESHRGW37lqUJ7In0SssNSLE="
       alt="Responsive web design illustration"
       placeholder="blur"
       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
       height={450} 
-      width={300}   
+      width={600}   
       className=''
       
     />
     {/* overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/60 to-stone-900/5 backdrop-blur-[2px] transition-all duration-300"></div>
-    {children}
+    {/* <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/60 to-stone-900/5 backdrop-blur-[2px] transition-all duration-300"></div>
+    {children} */}
   </div>
 );
 
@@ -129,7 +129,7 @@ function Ecommerce() {
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>eCommerce Web Design</h2>
-          <p className='mt-3 primary'>Work with an industry leading web design company to scale and smoothline your online expirience</p>
+          <p className='mt-3 primary'>Work with an industry leading eCommerce design company to scale and smoothline your online expirience</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
