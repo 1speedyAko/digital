@@ -116,7 +116,7 @@ function SocialMediaMarketing() {
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>Social Media Marketing Agency</h2>
-          <p className='mt-3 primary'>Work with an industry leading  Social Media Marketing  company to scale and get a wider audience and online following.</p>
+          <p className='mt-3 primary'>Work with an industry leading  Social Media Marketing  agency to scale and get a wider audience and online following.</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">

@@ -47,7 +47,7 @@ const SocialMediaMarketingProcess  = [
 const SeoItems = [
   { text: 'Key Word research And optimization', description: "We conduct extensive research on the relevant keywords pertaining our clients' website, competiton and industry trends. " },
   { text: 'Content Marketing', description: 'Digital Cecara offers content marketing solutions to brands that generates leads.By providing SEO optimized content that generates traffic to your website. ' },
-  { text: 'Technical Seo Services', description: 'This is about SEO-friendly design' },
+  { text: 'Technical Seo Services', description: 'Our Technical SEO services focus on optimizing your website’s infrastructure for better performance and search engine visibility. We address critical factors such as site speed, mobile responsiveness, crawlability, indexation, and site architecture to improve your rankings and user experience.'},
   { text: 'Link building', description: '   Our team uses social media plaforms to execute acivities and command a strong social media presence. We focus on building high quality' },
   { text: 'Content Marketing', description: 'Digital Cecara provides online marketing services to enable brands sell their products and services. Using well structured marketing campaings we connect customers to your services' },
 ];

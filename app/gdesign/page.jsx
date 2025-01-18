@@ -9,13 +9,14 @@ import ListHover from '../components/ListHover';
 import { useLoading } from '../components/LoadingContext';
 import Faqs from '../components/Faqs';
 import { ExpandableCard } from '../components/ExpandableCard';
+import { TextFade } from '../components/TextFade';
 
 const cardContent = {
   title: "Lorem ipsum dolor",
   description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, hic ipsum!",
 };
 
-const BusinessCardDesignProcess  = [
+const GraphicDesignProcess  = [
   {
    
     url: "/imgs/abstract/1.jpg",
@@ -44,11 +45,25 @@ const BusinessCardDesignProcess  = [
   
 ];
 
-const BusinessCardItems = [
-  { text: 'Custom Business Card Design', description: 'This is about responsive design' },
-  { text: 'Premium Finishes and Print-Ready Files', description: 'This is about UI/UX' },
-  { text: 'Digital Business Cards', description: 'This is about SEO-friendly design' },
+const GraphicDesignItems = [
+  { 
+    text: '3D Typography', 
+    description: 'Creating eye-catching designs with bold, three-dimensional text that adds depth and realism to your visuals.' 
+  },
+  { 
+    text: 'Retro Futurism', 
+    description: 'Blending nostalgic retro styles with futuristic elements to produce unique and engaging graphic art.' 
+  },
+  { 
+    text: 'Sustainable Design', 
+    description: 'Focusing on eco-friendly visuals and designs that promote environmental awareness and responsibility.' 
+  },
+  { 
+    text: 'Motion Graphics and Micro-Animations', 
+    description: 'Enhancing user experience with subtle animations and dynamic motion graphics that bring your designs to life.' 
+  },
 ];
+
 
 const CardBody = ({ className = "" }) => (
   <div className={`px-2 text-gray-100 sm:px-4 py-0 sm:pb-3 text-left ${className}`}>
@@ -101,12 +116,14 @@ function GraphicDesign() {
     <div className="min-h-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
+        <TextFade>
           <h2 className='text-4xl font-bold heading'>Graphic Design Agency</h2>
-          <p className='mt-3 primary'>Work with an industry leading Graphic Design  company to scale and smoothline your online expirience.We create apealing designs that echo your identity.</p>
+        </TextFade>  
+          <p className='mt-3 primary'>Work with an industry leading Graphic Design  Agency to scale and smoothline your online expirience.We create apealing designs that echo your identity.</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
-                <span className="relative mt-2 font-bold">{item.icon}</span>
+               <TextFade><span className="relative mt-2 font-bold">{item.icon}</span></TextFade> 
                 <span className='primary'>{item.text} </span> 
               </li>
             ))}
@@ -121,14 +138,17 @@ function GraphicDesign() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
-            <h2 className='font-bold text-3xl capitalize ml-3'>Graphic Design  services</h2>
+            <TextFade>
+               <h2 className='font-bold text-3xl capitalize ml-3'>Graphic Design  services</h2>
+            </TextFade>
+            
             <ExpandableCard>
             <p className='primary ml-5'>
-              
-              Our team of passionate designers will work with you every step of the way to ensure your business card design aligns perfectly with your brand guidelines. Our design process is centered around our clients, ensuring a collaborative experience that brings your vision to life. From concept creation to the final design, we focus on delivering business cards that are not only visually stunning but also professionally crafted to leave a lasting impression. Whether you need a sleek, minimalist design or something bold and creative, we&apos;ve got you covered.
+              Elevate your brand with our expert graphic design services. Our talented team specializes in creating custom designs that capture your unique style and resonate with your audience. From logos and business cards to marketing materials and digital graphics, we craft visually striking designs tailored to your needs. Let us help you make a bold statement with professional and creative designs that leave a lasting impact.
             </p>
+
             </ExpandableCard>
-            <ListHover items={BusinessCardItems}/>
+            <ListHover items={GraphicDesignItems}/>
           </div>
           <div className='grid place-content-center'>
             <Form/>
@@ -136,13 +156,13 @@ function GraphicDesign() {
         </div>
         <Slider 
         
-        title="Our Business Card Design Process"
-        processSteps={BusinessCardDesignProcess}
-        FooterText="Our Business Card Design Process"
+        title="Our Graphic  Design Process"
+        processSteps={GraphicDesignProcess}
+        FooterText="Our Graphic  Design Process"
         />
         <Faqs
         title='FAQS'
-        faqs={BusinessCardFaqs}
+        faqs={GraphicDesignFaqs}
         />
     </div>
   );
@@ -150,25 +170,25 @@ function GraphicDesign() {
 
 export default GraphicDesign;
 
-const BusinessCardFaqs = [
+const GraphicDesignFaqs = [
   {
-    text: "What is your business card design process?",
-    description: "Our business card design process includes four key steps: Discovery & Consultation, Concept Development, Refinement, and Finalization. We collaborate closely with you at every stage to create a professional and impactful design that represents your brand effectively."
+    text: "What services do you offer in graphic design?",
+    description: "Our graphic design services include logo design, branding, social media graphics, marketing materials, web graphics, and more. We aim to create visually compelling designs that effectively communicate your brand’s message."
   },
   {
-    text: "How long does it take to design a business card?",
-    description: "The timeline for business card design depends on the complexity of the design and the number of revisions. On average, it takes about 2 to 5 business days to complete a high-quality design, including time for feedback and refinement."
+    text: "How long does it take to complete a graphic design project?",
+    description: "The timeline varies depending on the project’s scope and complexity. Typically, smaller projects like social media graphics can take 1-3 days, while larger projects like branding can take 1-2 weeks or more."
   },
   {
-    text: "Can I provide input during the design process?",
-    description: "Absolutely! Your input is essential. We gather your preferences and brand guidelines during the consultation phase and provide design concepts for your feedback, ensuring the final design aligns perfectly with your vision."
+    text: "Can I provide input and feedback during the design process?",
+    description: "Of course! Your input is highly valued. We work closely with you at each stage of the design process, from initial concepts to revisions, ensuring the final product meets your expectations."
   },
   {
-    text: "Will my business card design match my brand identity?",
-    description: "Yes, every business card design we create is custom-made to reflect your brand identity. We ensure consistency with your logo, color scheme, and overall style to maintain a cohesive brand image."
+    text: "How do you ensure the designs align with my brand identity?",
+    description: "We begin every project with a discovery phase to understand your brand’s values, target audience, and style preferences. This ensures that every design is cohesive and aligns seamlessly with your brand identity."
   },
   {
-    text: "What formats will I receive for my business card design?",
-    description: "You’ll receive your finalized business card design in multiple formats, including print-ready PDF, PNG, and editable source files, making it easy to use with any professional printing service."
+    text: "What file formats will I receive for my design projects?",
+    description: "You will receive your final designs in multiple formats, such as high-resolution PNG, JPEG, and vector files like AI or EPS. For print projects, we provide print-ready PDFs to ensure professional-quality output."
   }
 ];

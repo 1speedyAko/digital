@@ -45,9 +45,21 @@ const BusinessCardDesignProcess  = [
 ];
 
 const BusinessCardItems = [
-  { text: 'Custom Business Card Design', description: 'This is about responsive design' },
-  { text: 'Premium Finishes and Print-Ready Files', description: 'This is about UI/UX' },
-  { text: 'Digital Business Cards', description: 'This is about SEO-friendly design' },
+  {
+    text: "Custom Business Card Design",
+    description:
+      "Stand out with professionally designed custom business cards tailored to reflect your unique brand identity. From sleek minimalist designs to bold and creative layouts, we craft cards that make a lasting impression."
+  },
+  {
+    text: "Premium Finishes and Print-Ready Files",
+    description:
+      "Elevate your business cards with premium finishes like foil stamping, embossing, or matte coating. Receive high-resolution, print-ready files optimized for professional printing services."
+  },
+  {
+    text: "Digital Business Cards",
+    description:
+      "Embrace the future of networking with digital business cards that integrate QR codes, interactive links, and contactless sharing. Designed to be visually appealing and highly functional across devices."
+  }
 ];
 
 const CardBody = ({ className = "" }) => (

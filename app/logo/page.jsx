@@ -45,10 +45,23 @@ const LogoDesignProcess  = [
 ];
 
 const LogoDesignItems = [
-  { text: 'Logo Design', description: 'This is about responsive design' },
-  { text: 'Logo Re-Design', description: 'This is about UI/UX' },
-  { text: 'Brand Guidelines', description: 'This is about SEO-friendly design' },
+  {
+    text: "Logo Design",
+    description:
+      "Create a strong visual identity with a custom logo designed to reflect your brand’s values and mission. Our logo designs are crafted to be versatile, scalable, and impactful, ensuring your brand stands out across all platforms."
+  },
+  {
+    text: "Logo Re-Design",
+    description:
+      "Give your brand a fresh new look with a logo re-design. We refine and modernize your existing logo to align with current design trends and better represent your evolving brand identity."
+  },
+  {
+    text: "Brand Guidelines",
+    description:
+      "Ensure consistency across all your branding materials with comprehensive brand guidelines. These guidelines include logo usage, color palettes, typography, and more, providing clear direction for your brand’s visual communication."
+  }
 ];
+
 
 const CardBody = ({ className = "" }) => (
   <div className={`px-2 text-gray-100 sm:px-4 py-0 sm:pb-3 text-left ${className}`}>
@@ -102,7 +115,7 @@ function WebDesign() {
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>Logo Design</h2>
-          <p className='mt-3 primary'>Work with an industry leading Logo design company to scale and smoothline your online expirience</p>
+          <p className='mt-3 primary'>Work with an industry leading Logo design agency to scale and smoothline your online expirience</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
