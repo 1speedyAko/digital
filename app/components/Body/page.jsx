@@ -64,18 +64,21 @@ function Body() {
             imageURL: "https://plus.unsplash.com/premium_photo-1678566153919-86c4ba4216f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww",
             buttonText: "See More",
             route:"/webdesign",
+            instruction:"touch here"
         },
         {
             title: "Email Marketing",
             description: "Explore the beauty of nature with breathtaking views.",
             imageURL: "https://plus.unsplash.com/premium_photo-1721910821661-e3cd6b53b61d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGVtYWlsJTIwbWFya2V0aW5nfGVufDB8fDB8fHww",
-            buttonText: "Explore"
+            buttonText: "Explore",
+            instruction:"touch here"
         },
         {
           title: "Content Marketing",
           description: "Explore the beauty of nature with breathtaking views.",
           imageURL: "https://media.istockphoto.com/id/1360521208/photo/businessman-using-a-computer-for-analysis-seo-search-engine-optimization-marketing-ranking.webp?a=1&b=1&s=612x612&w=0&k=20&c=icUfwJYefPLxioStRtEdLOKClOQQK4Ztm6zHvcC6uoI=",
-          buttonText: "Explore"
+          buttonText: "Explore",
+          instruction:"touch here"
       },
     ];
 
@@ -101,12 +104,16 @@ function Body() {
                                     33vw" // Optional for better optimization
                             />
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+                        <div className=" absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                        <span className="grid place-content-center rounded-full  border mr-2 mt-4 font-bold primary text-3xl">{card.instruction}</span>
+                        </div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
-                            <h1 className="font-dmserif text-3xl font-bold text-white">{card.title}</h1>
+                            <h1 className="font-dmserif text-3xl font-bold text-white">{card.title}
+                              
+                            </h1>
                             <p className="text-lg italic text-white mb-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{card.description}</p>
                             <button
-                                className="font-com rounded-full shadow shadow-black/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white hover:bg-neutral-800 active:bg-neutral-700 active:scale-95 transition transform duration-150"
+                                className="font-com rounded-full shadow shadow-black/60 bg-neutral-900 py-10 px-3.5 text-sm capitalize text-white hover:bg-neutral-800 active:bg-neutral-700 active:scale-95 transition transform duration-150"
                                 onClick={() => router.push(card.route)}
                             >
                                 {card.buttonText}
