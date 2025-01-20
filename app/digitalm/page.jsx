@@ -103,7 +103,7 @@ function DigitalMarketing() {
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>Digital Marketing Agency</h2>
-          <p className='mt-3 primary'>Work with an industry leading Graphic Design  company to scale and smoothline your online expirience.We create apealing designs that echo your identity.</p>
+          <p className='mt-3 primary'>Work with an industry leading digital marketing agency to scale and smoothline your online expirience.We create apealing solutions that resonates and satisfies your clients needs.</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">

@@ -7,6 +7,7 @@ import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
 import { useLoading } from '../components/LoadingContext';
 import Faqs from '../components/Faqs';
+import { ExpandableCard } from '../components/ExpandableCard';
 
 
 
@@ -38,13 +39,13 @@ const ecommerceProcess = [
     url: "/imgs/ecommerce/2.jpg",
     title: "Wireframing & Prototyping",
     id: 2,
-    step: "Create wireframes for key pages like home, product, and checkout. Build prototypes for user testing.",
+    step: "Create wireframes for key pages like home,product,and checkout., Build prototypes for user testing.",
   },
   {
     url: "/imgs/ecommerce/3.jpg",
     title: "Design",
     id: 3,
-    step: "Develop a visually appealing UI/UX with branding elements. Focus on mobile-first design principles.",
+    step: "Develop a visually appealing UI/UX with branding elements., Focus on mobile-first design principles.",
   },
   {
     url: "/imgs/ecommerce/4.jpg",
@@ -62,7 +63,7 @@ const ecommerceProcess = [
     url: "/imgs/ecommerce/6.jpg",
     title: "Testing & Optimization",
     id: 6,
-    step: "Test for usability, speed, and compatibility. Optimize SEO, page load time, and navigation.",
+    step: "Test for usability,speed,and compatibility., Optimize SEO,page load time,and navigation.",
   },
   {
     url: "/imgs/ecommerce/7.jpg",
@@ -129,7 +130,7 @@ function Ecommerce() {
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>eCommerce Web Design</h2>
-          <p className='mt-3 primary'>Work with an industry leading eCommerce design company to scale and smoothline your online expirience</p>
+          <p className='mt-3 primary'>Work with an industry leading eCommerce wed design agency to scale and smoothline your online expirience. Enjoy the benefit of further outreach and be able to explore new markets.</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
@@ -148,6 +149,12 @@ function Ecommerce() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
+            <h2 className='font-bold text-3xl capitalize ml-3'>Digital Marketing Agency</h2>
+              <ExpandableCard>
+              <p className='primary ml-5'>
+                  At Digital Cecara, we help businesses grow their online presence with tailored digital marketing solutions. From search engine optimization (SEO) to social media campaigns and content marketing, we craft strategies designed to connect with your audience and drive real results. Our team works closely with you to understand your brand and create campaigns that align with your goals. Whether it’s improving search rankings, increasing engagement, or boosting conversions, we deliver strategies that make a measurable impact.
+              </p>
+              </ExpandableCard>
             <ListHover items={ecommerceItems}/>
           </div>
           <div className='grid place-content-center'>

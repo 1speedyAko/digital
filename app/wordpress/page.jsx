@@ -8,6 +8,7 @@ import { FaCheck } from "react-icons/fa";
 import ListHover from '../components/ListHover';
 import { useLoading } from '../components/LoadingContext';
 import Faqs from '../components/Faqs';
+import { ExpandableCard } from '../components/ExpandableCard';
 
 
 const wordpressProcess = [
@@ -121,7 +122,9 @@ function Wordpress() {
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading '>Wordpress Web Design</h2>
-          <p className='mt-3 primary'>Work with an industry leading Wordpress web design company to scale and smoothline your online expirience</p>
+          <p className='mt-3 primary'>Work with an industry leading Wordpress web design agency to scale and smoothline your online expirience.
+            We make sure that your online presence is felt and has impactful 
+          </p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
@@ -140,6 +143,12 @@ function Wordpress() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
+            <h2 className='font-bold text-3xl capitalize ml-3'>Wordpress Design Agency</h2>
+              <ExpandableCard>
+              <p className='primary ml-5'>
+                  At Digital Cecara, we help businesses grow their online presence with tailored digital marketing solutions. From search engine optimization (SEO) to social media campaigns and content marketing, we craft strategies designed to connect with your audience and drive real results. Our team works closely with you to understand your brand and create campaigns that align with your goals. Whether it’s improving search rankings, increasing engagement, or boosting conversions, we deliver strategies that make a measurable impact.
+              </p>
+              </ExpandableCard>
             <ListHover items={wordpressItems}/>
           </div>
           <div className='grid place-content-center'>
