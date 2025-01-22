@@ -156,12 +156,11 @@ function SocialMediaMarketing() {
         processSteps={SocialMediaMarketingProcess}
         FooterText="Social Media Marketing Best Practices"
         />
-         <RateCard/>
+         <RateCard details={details}/>
         <Faqs
         title='FAQS'
         faqs={SocialMediaMarketingFaqs}
         />
-       
     </div>
   );
 }
@@ -189,4 +188,22 @@ const SocialMediaMarketingFaqs = [
     text: "What types of reports will I receive for my campaigns?",
     description: "You’ll receive detailed reports that include key metrics such as engagement rates, follower growth, website traffic, and conversions. We provide insights and recommendations to help you understand the performance of your campaigns and refine your strategy."
   }
+];
+
+const details = [
+  {
+    title: 'Basic Package',
+    description: 'This package is ideal for businesses starting out and aiming to enhance their online visibility.',
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+  },
+  {
+    title: 'Standard Package',
+    description: 'Perfect for growing businesses that need more advanced tools.',
+    features: ['Feature A', 'Feature B', 'Feature C'],
+  },
+  {
+    title: 'Premium Package',
+    description: 'Designed for established businesses looking for maximum impact.',
+    features: ['Feature X', 'Feature Y', 'Feature Z'],
+  },
 ];
