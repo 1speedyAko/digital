@@ -9,6 +9,7 @@ import ListHover from '../components/ListHover';
 import { useLoading } from '../components/LoadingContext';
 import Faqs from '../components/Faqs';
 import { ExpandableCard } from '../components/ExpandableCard';
+import RateCard from '../components/RateCard';
 
 const cardContent = {
   title: "Lorem ipsum dolor",
@@ -155,10 +156,12 @@ function SocialMediaMarketing() {
         processSteps={SocialMediaMarketingProcess}
         FooterText="Social Media Marketing Best Practices"
         />
+         <RateCard/>
         <Faqs
         title='FAQS'
         faqs={SocialMediaMarketingFaqs}
         />
+       
     </div>
   );
 }

@@ -12,6 +12,9 @@
 .primary{
   @apply text-white
 }
+.cards{
+  @apply border border-white h-[50px]
+}
  @layer base {
   :root {
 
