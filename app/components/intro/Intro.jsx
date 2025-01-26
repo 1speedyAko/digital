@@ -53,7 +53,7 @@ function Intro(
           <div className='grid md:grid-cols-2 sm:grid-cols-1 md:gap-8 sm:gap-3 px-5 text-xl text-center mt-7 min-h-max'>
             <div className='flex flex-col'>
               <TextFade>
-                  <p className=' flex-1 text-balance primary'>Digital Cecara is an online digital marketing agency that serves to provide quality services to online brands.We have a team of digital marketing professionals who work closely with our clients to grow brands and ensure that our clients achieve their targets and goals. We offer custom web design and digital marketing solutions for the best results.</p>                
+                  <p className=' flex-1 text-balance primary'>Digital Cheuxes is an online digital marketing agency that serves to provide quality services to online brands.We have a team of digital marketing professionals who work closely with our clients to grow brands and ensure that our clients achieve their targets and goals. We offer custom web design and digital marketing solutions for the best results.</p>                
               </TextFade>
               
             </div>

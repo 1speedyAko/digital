@@ -152,7 +152,7 @@ function Ecommerce() {
             <h2 className='font-bold text-3xl capitalize ml-3'>Digital Marketing Agency</h2>
               <ExpandableCard>
               <p className='primary ml-5'>
-                  At Digital Cecara, we help businesses grow their online presence with tailored digital marketing solutions. From search engine optimization (SEO) to social media campaigns and content marketing, we craft strategies designed to connect with your audience and drive real results. Our team works closely with you to understand your brand and create campaigns that align with your goals. Whether it’s improving search rankings, increasing engagement, or boosting conversions, we deliver strategies that make a measurable impact.
+                  At Digital Cheuxes, we help businesses grow their online presence with tailored digital marketing solutions. From search engine optimization (SEO) to social media campaigns and content marketing, we craft strategies designed to connect with your audience and drive real results. Our team works closely with you to understand your brand and create campaigns that align with your goals. Whether it’s improving search rankings, increasing engagement, or boosting conversions, we deliver strategies that make a measurable impact.
               </p>
               </ExpandableCard>
             <ListHover items={ecommerceItems}/>

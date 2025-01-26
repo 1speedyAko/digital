@@ -49,12 +49,12 @@ export function ExpandableCard({
         >
           <Button
             variant="outline"
-            className="w-full bg-inherit dark:bg-inherit rounded-lg"
+            className="w-full bg-inherit dark:bg-inherit rounded-lg font-bold spa"
             onClick={() => setIsExpanded(!isExpanded)}
             aria-expanded={isExpanded}
             aria-controls="expandable-content"
           >
-            {isExpanded ? 'Collapse' : 'Expand'}
+            {isExpanded ? 'Collapse' : 'Click'}
           </Button>
         </div>
       </div>

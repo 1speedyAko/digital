@@ -21,7 +21,7 @@ function Texts() {
             </TextFade>
             <TextFade>
               <p>
-              At Digital Cecara, we specialize in elevating your brand to new heights through strategic digital marketing. By utilizing advanced marketing tools and harnessing the power of social media, we create impactful online campaigns that boost visibility, engage audiences, and drive measurable growth for your business.
+              At Digital Cheuxes, we specialize in elevating your brand to new heights through strategic digital marketing. By utilizing advanced marketing tools and harnessing the power of social media, we create impactful online campaigns that boost visibility, engage audiences, and drive measurable growth for your business.
               </p>
             </TextFade>
           </div>

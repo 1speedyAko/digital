@@ -194,7 +194,8 @@ const details = [
   {
     title: 'Basic Package',
     description: 'This package is ideal for businesses starting out and aiming to enhance their online visibility.',
-    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+    features: ['Facebook , Instagram, X', 'Profile Optimization', 'Custom Digital Strategy','14 campaign post', '14 themed graphic designs','Promote website/page',
+       'Inbound marketing strategy', 'Competitor analysis', 'Dedicated Posting Times', 'Hashtag Management','Social Media Trend Analysis', 'Team Collaboration','Auxilliary Services'],
   },
   {
     title: 'Standard Package',

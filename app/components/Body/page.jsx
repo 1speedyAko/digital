@@ -68,17 +68,19 @@ function Body() {
         },
         {
             title: "Email Marketing",
-            description: "Explore the beauty of nature with breathtaking views.",
+            description: "Create engaging email campaigns that connect with your audience and drive results.",
             imageURL: "https://plus.unsplash.com/premium_photo-1721910821661-e3cd6b53b61d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGVtYWlsJTIwbWFya2V0aW5nfGVufDB8fDB8fHww",
             buttonText: "Explore",
-            instruction:"touch here"
+            instruction:"touch here",
+            route:"/email"
         },
         {
-          title: "Content Marketing",
-          description: "Explore the beauty of nature with breathtaking views.",
+          title: "SEO",
+          description: "Enhance your website’s visibility and rank higher on search engines to attract more traffic.",
           imageURL: "https://media.istockphoto.com/id/1360521208/photo/businessman-using-a-computer-for-analysis-seo-search-engine-optimization-marketing-ranking.webp?a=1&b=1&s=612x612&w=0&k=20&c=icUfwJYefPLxioStRtEdLOKClOQQK4Ztm6zHvcC6uoI=",
           buttonText: "Explore",
-          instruction:"touch here"
+          instruction:"touch here",
+          route:'/seo'
       },
     ];
 

@@ -119,7 +119,7 @@ function WebDesign() {
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>Custom Web Design</h2>
-          <p className='mt-3 primary'>Work with an industry leading web design company to scale and smoothline your online expirience</p>
+          <p className='mt-3 primary'>Work with an industry leading web design agency to scale and smoothline your online expirience</p>
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
@@ -141,7 +141,7 @@ function WebDesign() {
           <h2 className='font-bold text-3xl capitalize ml-3'>Custom web Design services</h2>
             <ExpandableCard>
               <p className='primary ml-5'>
-              Digital Cecaras&apos;  Custom Web design is a cheap and affordable service enabling brands and businesses have a digital presence.
+              Digital Cheuxes&apos;  Custom Web design is a cheap and affordable service enabling brands and businesses have a digital presence.
               Our team of dedicated web designers will tailor your dream website according to your brand guidlines, industry and current trends. We use various technologies to achieve your custom website
               such as react, nextjs, webflow and so on.Let us help you achieve your dream of scaling up on the digital space.
               </p>

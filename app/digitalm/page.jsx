@@ -122,12 +122,13 @@ function DigitalMarketing() {
         </div>
         <div className='grid md:grid-cols-2 theme'>
           <div className=''>
-            <h2 className='font-bold text-3xl capitalize ml-3'>Digital Marketing Agency</h2>
-            <ExpandableCard>
-            <p className='primary ml-5'>
-                At Digital Cecara, we help businesses grow their online presence with tailored digital marketing solutions. From search engine optimization (SEO) to social media campaigns and content marketing, we craft strategies designed to connect with your audience and drive real results. Our team works closely with you to understand your brand and create campaigns that align with your goals. Whether it’s improving search rankings, increasing engagement, or boosting conversions, we deliver strategies that make a measurable impact.
-            </p>
-            </ExpandableCard>
+          <h2 className="font-bold text-3xl capitalize ml-3">Digital Marketing Agency</h2>
+          <ExpandableCard>
+          <p className="primary ml-5">
+            At Digital Cheuxes, we’re dedicated to helping businesses thrive in the digital world. Our comprehensive digital marketing services are designed to connect you with your audience and drive real, measurable growth. From crafting targeted social media campaigns and engaging content to leveraging SEO and data-driven strategies, we focus on creating a strong online presence that aligns with your brand’s goals. Whether it’s increasing visibility, boosting engagement, or driving conversions, our team works closely with you to develop solutions that deliver impactful results and long-term success.
+          </p>
+          </ExpandableCard>
+
             {/* <ListHover items={BusinessCardItems}/> */}
           </div>
           <div className='grid place-content-center'>
@@ -137,7 +138,7 @@ function DigitalMarketing() {
         <HoverImageLinks/>
         <Faqs
         title='FAQS'
-        faqs={BusinessCardFaqs}
+        faqs={DigitalMarketingFaqs}
         />
     </div>
   );
@@ -145,25 +146,29 @@ function DigitalMarketing() {
 
 export default DigitalMarketing;
 
-const BusinessCardFaqs = [
+const DigitalMarketingFaqs = [
   {
-    text: "What is your business card design process?",
-    description: "Our business card design process includes four key steps: Discovery & Consultation, Concept Development, Refinement, and Finalization. We collaborate closely with you at every stage to create a professional and impactful design that represents your brand effectively."
+    text: "What is your digital marketing strategy development process?",
+    description: "Our strategy development process involves four key steps: Discovery & Research, Goal Setting, Strategy Formulation, and Execution Planning. We collaborate closely with you to create a tailored strategy that aligns with your business objectives and target audience."
   },
   {
-    text: "How long does it take to design a business card?",
-    description: "The timeline for business card design depends on the complexity of the design and the number of revisions. On average, it takes about 2 to 5 business days to complete a high-quality design, including time for feedback and refinement."
+    text: "How long does it take to see results from digital marketing?",
+    description: "The timeline for results varies depending on the goals, channels, and strategies used. Typically, it takes 3 to 6 months to see measurable improvements, though some campaigns, like paid ads, may show results sooner."
   },
   {
-    text: "Can I provide input during the design process?",
-    description: "Absolutely! Your input is essential. We gather your preferences and brand guidelines during the consultation phase and provide design concepts for your feedback, ensuring the final design aligns perfectly with your vision."
+    text: "Can I provide input on the digital marketing strategy?",
+    description: "Absolutely! Your input is vital. We involve you in the discovery phase to understand your goals, preferences, and insights about your audience. Throughout the campaign, we welcome your feedback to ensure the strategy aligns with your vision."
   },
   {
-    text: "Will my business card design match my brand identity?",
-    description: "Yes, every business card design we create is custom-made to reflect your brand identity. We ensure consistency with your logo, color scheme, and overall style to maintain a cohesive brand image."
+    text: "Will your digital marketing efforts align with my brand identity?",
+    description: "Yes, all our digital marketing campaigns are designed to reflect your brand identity. From tone and visuals to messaging, we ensure consistency across all platforms to maintain a cohesive and impactful brand presence."
   },
   {
-    text: "What formats will I receive for my business card design?",
-    description: "You’ll receive your finalized business card design in multiple formats, including print-ready PDF, PNG, and editable source files, making it easy to use with any professional printing service."
+    text: "What deliverables can I expect from your digital marketing services?",
+    description: "Depending on the services you choose, you’ll receive deliverables such as campaign performance reports, social media content calendars, SEO keyword analysis, ad creatives, and analytics dashboards, providing full transparency and measurable results."
+  },
+  {
+    text: "What is SEO?",
+    description: "SEO, or Search Engine Optimization, is the practice of optimizing your website and content to improve its visibility in search engine results. It involves techniques like keyword research, on-page optimization, technical improvements, and building quality backlinks to drive organic traffic and increase your website's ranking on search engines like Google."
   }
 ];
