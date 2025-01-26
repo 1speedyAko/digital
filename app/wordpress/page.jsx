@@ -146,7 +146,8 @@ function Wordpress() {
             <h2 className='font-bold text-3xl capitalize ml-3'>Wordpress Design Agency</h2>
               <ExpandableCard>
                 <p className='primary ml-5'>
-                    At Digital Cecara, we specialize in creating custom WordPress websites that elevate your online presence. From intuitive design and responsive layouts to seamless user experiences and robust functionality, we build websites tailored to your business needs. Our team of experts works with you to understand your vision, ensuring that every WordPress site we create is aligned with your brand and goals. Whether you're looking to enhance your design, improve website performance, or integrate advanced features, we deliver solutions that drive results and help your business succeed online.
+                    At Digital Cheuxes, we specialize in creating custom WordPress websites that elevate your online presence. From intuitive design and responsive layouts to seamless user experiences and robust functionality,
+                     we build websites tailored to your business needs. Our team of experts works with you to understand your vision, ensuring that every WordPress site we create is aligned with your brand and goals. Whether you&apos;re looking to enhance your design, improve website performance, or integrate advanced features, we deliver solutions that drive results and help your business succeed online.
                 </p>
 
               </ExpandableCard>
