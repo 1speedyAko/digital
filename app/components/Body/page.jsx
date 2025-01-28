@@ -7,6 +7,7 @@ import HoverDevCards from "../Nutshel";
 import { useRouter } from "next/navigation";
 import { useLoading } from "../LoadingContext";
 import Faqs from "../Faqs";
+import Form from "../Form";
 
 
 const faqsHome = [
@@ -127,7 +128,15 @@ function Body() {
             </div>
         </div>
         <Texts/>
-        <HoverDevCards/>
+        <div className="grid md:grid-cols-2 "> 
+          <div className="ml-4">
+            <HoverDevCards/>
+          </div>
+          <div className="flex justify-center">
+            <Form/>
+          </div>
+        </div>
+        
         <Faqs
         title="FAQS"
         faqs={faqsHome}

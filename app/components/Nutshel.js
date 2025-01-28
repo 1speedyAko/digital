@@ -10,7 +10,7 @@ const HoverDevCards = () => {
     <TextFade>
     <div className="p-4 theme">
       <p className="text-4xl py-3 text-center font-semibold mb-2 capitalize heading ">Other features</p>
-      <div className="grid gap-4 grid-cols-2 lg:grid-cols-4 pb-10">
+      <div className="grid gap-4 grid-cols-2  pb-10">
         <Card
           title="B2B"
           subtitle="Business to business"

@@ -2,35 +2,34 @@
 import React, { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
 
 function Form() {
   const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
+    from_name: "",
+    from_email: "",
+    from_tel: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const formRef = useRef(null); // Ref for the form
+  const formRef = useRef(null);
 
   const maxLength = 50;
 
-  // Handle form field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  // Handle message input change with length limit
   const handleMessageChange = (e) => {
-    setMessage(e.target.value.slice(0, maxLength));
-    setFormData((prevState) => ({ ...prevState, message: e.target.value.slice(0, maxLength) }));
+    const value = e.target.value.slice(0, maxLength);
+    setMessage(value);
+    setFormData((prevState) => ({ ...prevState, message: value }));
   };
 
-  // Form submission handler
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -46,7 +45,7 @@ function Form() {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           setIsSuccess(true);
-          setFormData({ name: "", email: "", phone: "", message: "" });
+          setFormData({ from_name: "", from_email: "", from_tel: "", message: "" });
           setMessage("");
           setIsSubmitting(false);
         },
@@ -83,6 +82,8 @@ function Form() {
     },
   };
 
+  const notify = () => toast("Message sent!");
+
   return (
     <div className="p-3 py-10">
       <form
@@ -97,7 +98,7 @@ function Form() {
             <input
               type="text"
               name="from_name"
-              value={formData.name}
+              value={formData.from_name}
               placeholder="Name*"
               onChange={handleChange}
               style={styles.input}
@@ -109,7 +110,7 @@ function Form() {
             <input
               type="email"
               name="from_email"
-              value={formData.email}
+              value={formData.from_email}
               placeholder="Email*"
               onChange={handleChange}
               style={styles.input}
@@ -121,10 +122,12 @@ function Form() {
             <input
               type="tel"
               name="from_tel"
-              value={formData.phone}
+              value={formData.from_tel}
               placeholder="Phone*"
               onChange={handleChange}
               style={styles.input}
+              pattern="^\+?[0-9]{7,15}$" // Example regex for a valid phone number
+              title="Please enter a valid phone number (7 to 15 digits, optional '+' prefix)"
               required
             />
           </label>
@@ -140,7 +143,8 @@ function Form() {
             />
           </label>
 
-          <Button type="submit" disabled={isSubmitting}>
+          <Button type="submit" onClick={notify} disabled={isSubmitting}>
+            <ToastContainer />
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
 

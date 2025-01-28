@@ -141,7 +141,7 @@ function GraphicDesign() {
           <h2 className="font-bold text-3xl capitalize ml-3">Email Marketing Services</h2>
             <ExpandableCard>
               <p className="primary ml-5">
-                Our team of experienced marketers works closely with you to create email campaigns that align seamlessly with your brand and business goals. From crafting engaging content to designing visually stunning templates, we focus on delivering emails that capture your audience's attention and drive action. Our process is collaborative,
+                Our team of experienced marketers works closely with you to create email campaigns that align seamlessly with your brand and business goals. From crafting engaging content to designing visually stunning templates, we focus on delivering emails that capture your audience&apos;s attention and drive action. Our process is collaborative,
                  ensuring your input shapes every step, from strategy to execution. Whether you&apos;re looking to nurture leads, boost conversions, or strengthen customer relationships, we deliver email marketing solutions that leave a lasting impact.
               </p>
             </ExpandableCard>
