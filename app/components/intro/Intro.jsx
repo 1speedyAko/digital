@@ -17,7 +17,7 @@ function Intro(
    
 
   return (
-    <div className="font-bold relative mt-10">
+    <div className="font-bold relative mt-36">
       <div className="h-[50vh] flex flex-col ">
        <div
   ref={ref}

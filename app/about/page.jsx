@@ -18,7 +18,7 @@ const TextParallaxContentExample = () => {
     return () => clearTimeout(timer);
   }, [setIsLoading]);
   return (
-    <div className="pt-16">
+    <div className="mt-36">
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading="Digital Cheuxes"
@@ -133,7 +133,7 @@ const OverlayCopy = ({ subheading, heading }) => {
 };
 
 const ExampleContent = ({ title, text }) => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-16 md:grid-cols-12">
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-16 md:grid-cols-12 mt-36">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 heading">
       {title}
     </h2>
