@@ -35,22 +35,38 @@ const Footer = () => {
                   About
                 </Link>
               </li>
-              {/* <li className="mb-2">
-                <a  className="hover:text-gray-400">
+              <li className="mb-2">
+                <Link  href="/digitalm" className="hover:text-gray-400">
                   <FaServicestack className="inline-block mr-2" />
-                  Services
-                </a>
-              </li> */}
+                  Brand Marketing
+                </Link>
+              </li>
             </ul>
           </div>
           {/* Services */}
           <div>
             <h4 className="text-lg font-bold mb-4">Services</h4>
             <ul className="list-none">
-              <li className="mb-2">Custom Web Design</li>
-              <li className="mb-2">Search Engine Optimization</li>
-              <li className="mb-2">Social Media Marketing</li>
-              <li className="mb-2">Graphic Design</li>
+            <li className="mb-2">
+                <Link href="/webdesign" className="text-neutral-200 hover:underline">
+                  Custom Web Design
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/seo" className="text-neutral-200 hover:underline">
+                  Search Engine Optimization
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/social_media" className="text-neutral-200 hover:underline">
+                  Social Media Marketing
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/gdesign" className="text-neutral-200 hover:underline">
+                  Graphic Design
+                </Link>
+              </li>
             </ul>
           </div>
           {/* Physical Address and Contact */}

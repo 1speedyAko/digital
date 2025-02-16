@@ -7,6 +7,7 @@ import { IoLinkOutline } from "react-icons/io5";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -323,9 +324,14 @@ const AboutFlyout = () => {
             </div>
           </div>
         </div>
-        <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500">
-          Learn More About Us
-        </button>
+       <Button className="mt-3">
+        <Link
+         href="/about"
+        >
+           Learn More
+        </Link>
+       
+       </Button>
       </motion.div>
     </div>
   );
