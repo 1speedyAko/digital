@@ -10,7 +10,8 @@ import {
   FaTwitter,
   FaYoutube,
   FaLinkedin,
-  FaServicestack
+  FaServicestack,
+  FaEnvelope
 } from "react-icons/fa";
 
 
@@ -76,10 +77,10 @@ const Footer = () => {
               <FaAddressCard className="inline-block mr-2" />
               Kisumu City
             </p>
-            <p className="mt-2">
-              <FaPhone className="inline-block mr-2" />
-              0728-763-870
-            </p>
+            <Link href="mailto:contact@digitalcheuxes.co.ke" className="mt-2">
+              <FaEnvelope className="inline-block mr-2" />
+              contact@digitalcheuxes.co.ke
+            </Link>
             <p className="mt-2">
               <FaPhone className="inline-block mr-2" />
               0787-222-566

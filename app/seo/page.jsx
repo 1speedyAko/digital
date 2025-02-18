@@ -45,12 +45,30 @@ const SocialMediaMarketingProcess  = [
 ];
 
 const SeoItems = [
-  { text: 'Key Word research And optimization', description: "We conduct extensive research on the relevant keywords pertaining our clients' website, competiton and industry trends. " },
-  { text: 'Content Marketing', description: 'Digital Cecara offers content marketing solutions to brands that generates leads.By providing SEO optimized content that generates traffic to your website. ' },
-  { text: 'Technical Seo Services', description: 'Our Technical SEO services focus on optimizing your website’s infrastructure for better performance and search engine visibility. We address critical factors such as site speed, mobile responsiveness, crawlability, indexation, and site architecture to improve your rankings and user experience.'},
-  { text: 'Link building', description: '   Our team uses social media plaforms to execute acivities and command a strong social media presence. We focus on building high quality' },
-  { text: 'Content Marketing', description: 'Digital Cecara provides online marketing services to enable brands sell their products and services. Using well structured marketing campaings we connect customers to your services' },
+  { 
+    text: 'Keyword Research & Optimization', 
+    description: "We perform in-depth keyword research and optimization to enhance your website’s SEO. Our strategy includes analyzing competitor keywords, industry trends, and search intent to improve rankings and drive targeted organic traffic." 
+  },
+  { 
+    text: 'Content Marketing', 
+    description: "Digital Cheuxes Agency offers high-quality content marketing solutions that generate leads and improve SEO rankings. We create SEO-optimized blog posts, landing pages, and website content to increase traffic, engagement, and conversions." 
+  },
+  { 
+    text: 'Technical SEO Services', 
+    description: "Our Technical SEO services optimize your website’s performance for better search engine rankings. We focus on site speed, mobile optimization, crawlability, structured data, and indexation to enhance visibility and user experience." 
+  },
+  { 
+    text: 'Link Building & Authority Growth', 
+    description: "We implement high-quality link-building strategies to improve your domain authority and search rankings. Our approach includes guest posting, social media outreach, and authoritative backlink acquisition to strengthen your online presence." 
+  },
+  { 
+    text: 'Digital Marketing & SEO Campaigns', 
+    description: "At Digital Cheuxes Agency, we provide strategic SEO-driven digital marketing campaigns that help brands sell their products and services effectively. Our well-structured marketing strategies connect you with the right audience, boosting traffic and conversions." 
+  },
 ];
+
+
+
 
 const CardBody = ({ className="" }) => (
   <div className={`px-2 text-gray-100 sm:px-4 py-0 sm:pb-3 text-left ${className}`}>
@@ -103,8 +121,11 @@ function SocialMediaMarketing() {
     <div className="min-h-full mt-36">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
-          <h2 className='text-4xl font-bold heading'>SEO Services</h2>
-          <p className='mt-3 primary'>Work with an industry leading  SEO  company to scale and boost your following.</p>
+        <h2 className="text-4xl font-bold heading">Expert SEO Services for Business Growth</h2>
+          <p className="mt-3 primary">
+            Boost your online presence with Digital Cheuxes Seo  Agency, a top-rated SEO company. We specialize in increasing traffic, improving rankings, and driving conversions.
+          </p>
+
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
@@ -125,10 +146,10 @@ function SocialMediaMarketing() {
           <div className=''>
             <h2 className='font-bold text-3xl capitalize ml-3'>SEO Services</h2>
             <ExpandableCard>
-            <p className='primary ml-5'>
-              
-              Our team of passionate designers will work with you every step of the way to ensure your business card design aligns perfectly with your brand guidelines. Our design process is centered around our clients, ensuring a collaborative experience that brings your vision to life. From concept creation to the final design, we focus on delivering business cards that are not only visually stunning but also professionally crafted to leave a lasting impression. Whether you need a sleek, minimalist design or something bold and creative, we&apos;ve got you covered.
+            <p className="primary ml-5">
+              At <strong>Digital Cheuxes Agency</strong>, our expert SEO team works with you every step of the way to boost your website's visibility and rankings. We take a <strong>data-driven approach</strong> to SEO, ensuring that your business achieves <strong>higher search engine rankings, increased organic traffic, and better conversion rates</strong>. Our strategy includes <strong>keyword research, on-page and off-page optimization, technical SEO, and content marketing</strong>—all tailored to align perfectly with your brand’s goals. Whether you need <strong>local SEO, e-commerce SEO, or enterprise-level optimization</strong>, we’ve got you covered. Let’s create an SEO strategy that drives real results!
             </p>
+
             </ExpandableCard>
             <ListHover items={SeoItems}/>
           </div>
