@@ -47,7 +47,7 @@ const SocialMediaMarketingProcess  = [
 const SeoItems = [
   { 
     text: 'Keyword Research & Optimization', 
-    description: "We perform in-depth keyword research and optimization to enhance your website’s SEO. Our strategy includes analyzing competitor keywords, industry trends, and search intent to improve rankings and drive targeted organic traffic." 
+    description: "We perform in-depth keyword research and optimization to enhance your website&apos;s SEO. Our strategy includes analyzing competitor keywords, industry trends, and search intent to improve rankings and drive targeted organic traffic." 
   },
   { 
     text: 'Content Marketing', 
@@ -55,7 +55,7 @@ const SeoItems = [
   },
   { 
     text: 'Technical SEO Services', 
-    description: "Our Technical SEO services optimize your website’s performance for better search engine rankings. We focus on site speed, mobile optimization, crawlability, structured data, and indexation to enhance visibility and user experience." 
+    description: "Our Technical SEO services optimize your website&apos;s performance for better search engine rankings. We focus on site speed, mobile optimization, crawlability, structured data, and indexation to enhance visibility and user experience." 
   },
   { 
     text: 'Link Building & Authority Growth', 
