@@ -20,32 +20,32 @@ function Intro(
     <div className="font-bold relative mt-36">
       <div className="h-[50vh] flex flex-col ">
        <div
-  ref={ref}
-  className="text-center text-gray-100 px-4 sm:px-8"
->
-  <AnimatePresence>
-    {['LET\'S BUILD, IMPROVE,', 'AND SCALE YOUR BRAND'].map((line, lineIndex) => (
-          <div
-            key={lineIndex}
-            className="flex justify-center flex-wrap "
+            ref={ref}
+            className="text-center text-gray-100 px-4 sm:px-8"
           >
-            {line.split('').map((char, i) => (
-              <motion.span
-                key={`${lineIndex}-${i}`}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.05,
-                  delay: (lineIndex * line.length + i) * 0.05,
-                }}
-                className="inline-block text-2xl sm:text-4xl md:text-5xl font-bold"
-              >
-                {char === ' ' ? <span>&nbsp;</span> : char}
-              </motion.span>
-            ))}
-          </div>
+  <AnimatePresence>
+  <h1 className="text-center">
+    {['LET\'S BUILD, IMPROVE,', 'AND SCALE YOUR BRAND'].map((line, lineIndex) => (
+      <div key={lineIndex} className="flex justify-center flex-wrap">
+        {line.split('').map((char, i) => (
+          <motion.span
+            key={`${lineIndex}-${i}`}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.05,
+              delay: (lineIndex * line.length + i) * 0.05,
+            }}
+            className="inline-block text-2xl sm:text-4xl md:text-5xl font-bold"
+          >
+            {char === ' ' ? <span>&nbsp;</span> : char}
+          </motion.span>
         ))}
-      </AnimatePresence>
+      </div>
+    ))}
+  </h1>
+</AnimatePresence>
+
     </div>
 
         <div className="pt-2 text-2xl mt-2 md:min-h-max">
