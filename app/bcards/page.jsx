@@ -79,7 +79,7 @@ const list = [
 
 
 const CardWithImageV1 = ({ children }) => (
-  <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group">
+  <div className="relative rounded-2xl aspect-w-4 aspect-h-3 overflow-hidden group max-w-min">
     <Image
       src="https://media.istockphoto.com/id/1344870754/photo/shot-of-two-businesspeople-exchanging-business-cards-at-a-conference.jpg?s=612x612&w=0&k=20&c=PjVLw7W2wmaTWa7kMeuKgl-7SKejkKXlL9k0569VDXc="
       alt="Responsive web design illustration"
@@ -110,7 +110,7 @@ function BusinessCards() {
       return () => clearTimeout(timer); // Cleanup timer
     }, [setIsLoading]);
   return (
-    <div className="min-h-full mt-36">
+    <div className="min-h-full mt-36 w-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
         <h2 className="text-4xl font-bold heading">Business Card Design</h2>

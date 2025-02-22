@@ -112,7 +112,7 @@ function Form() {
             className="w-full h-24 p-3 text-base border border-gray-300 rounded resize-none"
             required
           />
-
+          <div>
           <Button 
             type="submit" 
             disabled={isSubmitting}
@@ -120,6 +120,7 @@ function Form() {
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
+          </div>
         </div>
       </form>
       <ToastContainer position="bottom-right" />

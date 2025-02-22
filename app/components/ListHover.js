@@ -11,7 +11,7 @@ function ListHover({ items }) {
   };
 
   return (
-    <div>
+    <div className=''>
       {items && items.map((item, index) => (
         <div className="p-4" key={index}>
           <TextFade>

@@ -9,7 +9,7 @@ import ListHover from './ListHover'
   
 function Faqs({title="FAQS", faqs=[]}) {
   return (
-    <div className='mt-0 theme '>
+    <div className='mt-0 theme w-full'>
         {/* <TextFade direction='up' staggerChildren={0.4}> */}
         <TextFade>              
             <h2 className='text-4xl font-bold text-center heading pt-2'>{title}</h2>                   

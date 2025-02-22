@@ -111,7 +111,7 @@ function WebDesign() {
       return () => clearTimeout(timer); // Cleanup timer
     }, [setIsLoading]);
   return (
-    <div className="min-h-full mt-36">
+    <div className="min-h-full mt-36 w-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>Logo Design</h2>

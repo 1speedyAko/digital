@@ -113,7 +113,7 @@ function SocialMediaMarketing() {
       return () => clearTimeout(timer); // Cleanup timer
     }, [setIsLoading]);
   return (
-    <div className="min-h-full">
+    <div className="min-h-full w-full">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
           <h2 className='text-4xl font-bold heading'>Social Media Marketing Agency</h2>

@@ -20,7 +20,7 @@ const TextParallaxContentExample = () => {
   return (
     <div className="mt-36">
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl="https://images.unsplash.com/photo-1585229259126-8e72b0f28f98?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2ViZGVzaWdufGVufDB8fDB8fHww"
         subheading="Digital Cheuxes"
         heading="About Us"
       >
@@ -41,7 +41,7 @@ const TextParallaxContentExample = () => {
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="?"
+        subheading=""
         heading="why choose us"
       >
         <ExampleContent
@@ -50,23 +50,23 @@ const TextParallaxContentExample = () => {
         />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="?"
-        heading="why choose us"
-      >
-        <ExampleContent
-          title="Vision"
-          text="We combine modern aesthetics with advanced technology to create solutions that reflect your brand's vision and resonate with your audience."
-        />
-      </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl="https://images.unsplash.com/photo-1633432695542-b2c8e2b8a26c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdlYmRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
         subheading=""
         heading="Our Vision"
       >
         <ExampleContent
+          title="Vision"
+          text="Our vision at Digital Cheuxes is to revolutionize digital marketing by seamlessly integrating innovation, strategy, and technology. We strive to create impactful digital experiences that empower brands, foster meaningful connections, and drive long-term success in the ever-evolving digital landscape."
+        />
+      </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1585229259079-05ab82f93c7b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYmRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+        subheading=""
+        heading="Mission"
+      >
+        <ExampleContent
           title="Our Mission?"
-          text="We combine modern aesthetics with advanced technology to create solutions that reflect your brand's vision and resonate with your audience."
+          text="At Digital Cheuxes, our mission is to blend cutting-edge digital marketing strategies with creativity and technology to elevate your brand. We craft data-driven solutions that amplify your online presence, engage your audience, and drive meaningful results."
         />
       </TextParallaxContent>
     </div>
