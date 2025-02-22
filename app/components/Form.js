@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 
 function Form() {
@@ -34,26 +34,26 @@ function Form() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    emailjs
-      .sendForm(
-        "service_0w14lae", // Replace with your Email.js service ID
-        "template_7wqwpw9", // Replace with your Email.js template ID
-        formRef.current, // Pass the form reference
-        "O51SQiTTN5iLK4MaT" // Replace with your Email.js public key
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setIsSuccess(true);
-          setFormData({ from_name: "", from_email: "", from_tel: "", message: "" });
-          setMessage("");
-          setIsSubmitting(false);
-        },
-        (err) => {
-          console.error("FAILED...", err);
-          setIsSubmitting(false);
-        }
-      );
+  //   emailjs
+  //     .sendForm(
+  //       "service_0w14lae", // Replace with your Email.js service ID
+  //       "template_7wqwpw9", // Replace with your Email.js template ID
+  //       formRef.current, // Pass the form reference
+  //       "O51SQiTTN5iLK4MaT" // Replace with your Email.js public key
+  //     )
+  //     .then(
+  //       (response) => {
+  //         console.log("SUCCESS!", response.status, response.text);
+  //         setIsSuccess(true);
+  //         setFormData({ from_name: "", from_email: "", from_tel: "", message: "" });
+  //         setMessage("");
+  //         setIsSubmitting(false);
+  //       },
+  //       (err) => {
+  //         console.error("FAILED...", err);
+  //         setIsSubmitting(false);
+  //       }
+  //     );
   };
 
   const styles = {

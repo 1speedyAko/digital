@@ -77,17 +77,18 @@ const ContactForm = () => {
     }
   };
 
-  return (
+  return (    
     <div className="py-8 mt-36">
-      <Card className="w-full max-w-xl mx-auto bg-blue-400">
+      <h2 className=" font-bold text-center text-3xl p-3">Contact us</h2>
+      <Card className="w-full max-w-xl mx-auto bg-neutral-200">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center text-neutral-100">Contact Us</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">Request a quote</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="firstName" className="text-neutral-300">
+                <Label htmlFor="firstName" className="">
                   First Name
                 </Label>
                 <Input
@@ -100,7 +101,7 @@ const ContactForm = () => {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="lastName" className="text-neutral-300">
+                <Label htmlFor="lastName" className="">
                   Last Name
                 </Label>
                 <Input
@@ -115,7 +116,7 @@ const ContactForm = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-neutral-300">
+              <Label htmlFor="email" className="">
                 Email
               </Label>
               <Input
@@ -130,7 +131,7 @@ const ContactForm = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="phone" className="text-neutral-300">
+              <Label htmlFor="phone" className="">
                 Phone Number
               </Label>
               <Input
@@ -144,7 +145,7 @@ const ContactForm = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="message" className="text-neutral-300">
+              <Label htmlFor="message" className="">
                 Message
               </Label>
               <Textarea
@@ -169,3 +170,7 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+
+
+// 

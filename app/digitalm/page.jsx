@@ -16,40 +16,36 @@ const cardContent = {
   description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, hic ipsum!",
 };
 
-const BusinessCardDesignProcess  = [
+
+
+const BrandMarketingItems = [
   {
-   
-    url: "/imgs/abstract/1.jpg",
-    title: "Discovery & Consultation",
-    id: 1,
-    step: " We first understand your brand guidelines and target audience. , We understand prefered styles and essential elements. ,    We then gather necessary content e.g social media handles and logo .",
+    text: 'Advanced SEO Strategy & Optimization',
+    description:
+      'Boost your organic search performance with data-driven SEO tactics, long-tail keyword targeting, and on-page optimization techniques designed to increase online visibility and drive sustainable traffic.',
   },
   {
-    url: "/imgs/abstract/2.jpg",
-    title: "Concept Development",
-    id: 2,
-    step: " We then create an initial sample based on your concept. , Adjust specific details,color and  typography, Ensure the design is appealing and aligned with your guidlines",
-  },  
-  {
-    url: "/imgs/abstract/3.jpg",
-    title: "Refinement",
-    id: 3,
-    step: "Here we incoporate feedback so as to refine the final design. , Adjust details like typography,color and themes .",
+    text: 'Targeted Email Marketing Campaigns',
+    description:
+      'Engage your audience with personalized email campaigns, advanced segmentation, and automated drip sequences that improve click-through rates and conversion metrics.',
   },
   {
-    url: "/imgs/abstract/4.jpg",
-    title: "Delivery",
-    id: 4,
-    step: " We finalize the design and prepare print ready files in high resolution. , Deliver files in multiple formats for both printing and digital sharing(PDF,PNG,AI). , We then provide guidance on printing options including premium finishes like foil stamping.",
+    text: 'Strategic Content Marketing Solutions',
+    description:
+      'Drive brand authority and lead generation with high-quality, SEO-friendly content that leverages long-tail keywords and multimedia storytelling to capture and convert your target audience.',
   },
-  
+  {
+    text: 'Dynamic Social Media Marketing',
+    description:
+      'Amplify your brand presence across platforms with data-backed social media strategies, influencer partnerships, and targeted engagement techniques that boost your online community.',
+  },
+  {
+    text: 'Creative Graphic Design & Visual Branding',
+    description:
+      'Enhance your brand identity with innovative graphic design services, including responsive digital assets, print-ready files, and UI/UX optimized visuals that resonate with modern audiences.',
+  },
 ];
 
-const BusinessCardItems = [
-  { text: 'Custom Business Card Design', description: 'This is about responsive design' },
-  { text: 'Premium Finishes and Print-Ready Files', description: 'This is about UI/UX' },
-  { text: 'Digital Business Cards', description: 'This is about SEO-friendly design' },
-];
 
 const CardBody = ({ className = "" }) => (
   <div className={`px-2 text-gray-100 sm:px-4 py-0 sm:pb-3 text-left ${className}`}>
@@ -125,11 +121,11 @@ function DigitalMarketing() {
           <h2 className="font-bold text-3xl capitalize ml-3">Digital Marketing Agency</h2>
           <ExpandableCard>
           <p className="primary ml-5">
-            At Digital Cheuxes, we’re dedicated to helping businesses thrive in the digital world. Our comprehensive digital marketing services are designed to connect you with your audience and drive real, measurable growth. From crafting targeted social media campaigns and engaging content to leveraging SEO and data-driven strategies, we focus on creating a strong online presence that aligns with your brand’s goals. Whether it’s increasing visibility, boosting engagement, or driving conversions, our team works closely with you to develop solutions that deliver impactful results and long-term success.
+            At Digital Cheuxes, we&apos;re dedicated to helping businesses thrive in the digital world. Our comprehensive digital marketing services are designed to connect you with your audience and drive real, measurable growth. From crafting targeted social media campaigns and engaging content to leveraging SEO and data-driven strategies, we focus on creating a strong online presence that aligns with your brand’s goals. Whether it’s increasing visibility, boosting engagement, or driving conversions, our team works closely with you to develop solutions that deliver impactful results and long-term success.
           </p>
           </ExpandableCard>
 
-            {/* <ListHover items={BusinessCardItems}/> */}
+            <ListHover items={BrandMarketingItems}/>
           </div>
           <div className='grid place-content-center'>
             <Form/>

@@ -37,7 +37,7 @@ export const HoverImageLinks = () => {
   heading="Email Marketing"
   subheading="Connecting with your audience through personalized campaigns"
   imgSrc="https://media.istockphoto.com/id/1450220273/vector/email-service-with-correspondence-delivery-electronic-mail-message-and-business-marketing-in.jpg?s=612x612&w=0&k=20&c=-FSrRSxoFbo8breKzAt-ZS9ZjNEe7rYDL30AY3Wt9Rg="
-  href="#"
+  href="/email"
 />
 
         
@@ -128,7 +128,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
         }}
         transition={{ type: "spring" }}
         src={imgSrc}
-        className="absolute z-0 h-24 w-32 rounded-lg object-cover md:h-48 md:w-64"
+        className="absolute z-0 h-24 w-32 rounded-lg object-cover sm:h-16 md:h-48 md:w-64"
         alt={`Image representing a link for ${heading}`}
       />
 

@@ -49,6 +49,26 @@ const TextParallaxContentExample = () => {
           text="We combine modern aesthetics with advanced technology to create solutions that reflect your brand's vision and resonate with your audience."
         />
       </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="?"
+        heading="why choose us"
+      >
+        <ExampleContent
+          title="Vision"
+          text="We combine modern aesthetics with advanced technology to create solutions that reflect your brand's vision and resonate with your audience."
+        />
+      </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading=""
+        heading="Our Vision"
+      >
+        <ExampleContent
+          title="Our Mission?"
+          text="We combine modern aesthetics with advanced technology to create solutions that reflect your brand's vision and resonate with your audience."
+        />
+      </TextParallaxContent>
     </div>
   );
 };
@@ -143,5 +163,5 @@ const ExampleContent = ({ title, text }) => (
   </div>
 );
 
-// Export the TextParallaxContentExample component correctly
+
 export default TextParallaxContentExample;

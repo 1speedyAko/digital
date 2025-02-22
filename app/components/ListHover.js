@@ -24,7 +24,7 @@ function ListHover({ items }) {
                 {item.text}
               </h2>
               <motion.div
-                className="w-6 h-6 mt-3 mr-6 rounded-full bg-slate-800 flex items-center justify-center"
+                className="min-w-[24px] min-h-[24px] w-6 h-6 mt-3 mr-6 rounded-full bg-slate-800 flex items-center justify-center shrink-0"
                 animate={{ rotate: activeIndex === index ? 180 : 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >

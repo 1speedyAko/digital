@@ -3,7 +3,7 @@
 import React, { useState} from 'react';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import { TextFade } from '../TextFade';
+import { TextFade } from './TextFade';
 
 
 function Intro(

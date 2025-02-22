@@ -3,6 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TextFade } from './textfade';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 function Texts() {
   return (
@@ -14,8 +16,8 @@ function Texts() {
 
       <div className="space-y-10">
         {/* First Section */}
-        <div className="grid lg:grid-cols-[1fr_3fr] bg-white p-6">
-          <div className="text-center flex flex-col items-center justify-center space-y-4">
+        <div className="grid lg:grid-cols-[1fr_3fr] bg-white p-6 sm:gap-4">
+          <div className="text-center flex flex-col items-center justify-center space-y-4 p-3">
             <TextFade>
               <h2 className="text-2xl font-semibold">Digital Marketing</h2>
             </TextFade>
@@ -23,6 +25,11 @@ function Texts() {
               <p>
               At Digital Cheuxes, we specialize in elevating your brand to new heights through strategic digital marketing. By utilizing advanced marketing tools and harnessing the power of social media, we create impactful online campaigns that boost visibility, engage audiences, and drive measurable growth for your business.
               </p>
+              <Button className='mt-2 '>
+                <Link href="/digitalm">
+                Read More
+                </Link>
+              </Button>
             </TextFade>
           </div>
           <div className="text-center flex items-center justify-center">
@@ -61,12 +68,17 @@ function Texts() {
               <p>
               We collaborate closely with our clients to deliver modern, custom-designed websites that align seamlessly with your brand guidelines. By enhancing your digital presence, we help you connect with a broader audience and create a lasting impact online              </p>
             </TextFade>
+            <Button className='mt-2'>
+                <Link href="/webdesign">
+               Visit Web Design
+                </Link>
+              </Button>
           </div>
         </div>
 
         {/* Third Section with Text on Left */}
         <div className="grid lg:grid-cols-[1fr_3fr] bg-white p-6">
-          <div className="text-center flex flex-col items-center justify-center space-y-4">
+          <div className="text-center flex flex-col items-center justify-center space-y-4 p-3">
             <TextFade>
               <h2 className="text-2xl font-semibold">Graphic Design</h2>
             </TextFade>
@@ -74,6 +86,11 @@ function Texts() {
               <p>
               Our team of experienced graphic designers is dedicated to creating unique and impactful brand identities tailored to your vision. By engaging you in the design process, we ensure your branding aligns with your goals, enhancing recognition and driving success.              </p>
             </TextFade>
+               <Button className='mt-2'>
+                <Link href="/gdesign">
+               Visit  Graphic Design
+                </Link>
+              </Button>
           </div>
           <div className="text-center flex items-center justify-center">
             <TextFade>
@@ -85,6 +102,7 @@ function Texts() {
               className="rounded-lg"
             />
             </TextFade>
+            
            
           </div>
         </div>

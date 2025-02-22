@@ -1,9 +1,9 @@
 'use client'
 
 import "./globals.css";
-import Navbar from "./components/nav/Navbar";
+import Navbar from "./components/Navbar";
 // import Body from "./components/Body/page";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/Footer";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import FramerLoader from "./components/Framerloader";

@@ -1,7 +1,7 @@
 'use client'
 import React,{useEffect} from "react";
-import Intro from "../intro/Intro";
-import Texts from "../text/Info";
+import Intro from "../Intro";
+import Texts from "../Info";
 import Image from "next/image";
 import HoverDevCards from "../Nutshel";
 import { useRouter } from "next/navigation";

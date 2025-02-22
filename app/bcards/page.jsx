@@ -113,8 +113,11 @@ function BusinessCards() {
     <div className="min-h-full mt-36">
       <div className="grid md:grid-cols-2 gap-4 mt-10 px-9 mb-10">
         <div className=''>
-          <h2 className='text-4xl font-bold heading'>Business Card Design</h2>
-          <p className='mt-3 primary'>Work with an industry leading Business Card design agency to scale and smoothline your online expirience</p>
+        <h2 className="text-4xl font-bold heading">Business Card Design</h2>
+          <p className="mt-3 primary">
+            Partner with an industry-leading Business Card design agency that transforms your traditional card into a dynamic brand asset. Our approach scales your business presence by integrating innovative digital cues—such as QR codes, NFC-enabled features, and interactive elements—that bridge the gap between physical and digital experiences. We focus on a seamless design that not only streamlines your online presence but also reinforces your brand identity, ensuring every card delivers a lasting digital impression.
+          </p>
+
           <ul>
             {list.map((item, index) => (
               <li key={index} className="flex text-2xl gap-2">
