@@ -1,19 +1,19 @@
 'use client';
-import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import * as React from 'react';
 
-export function TextFade({ 
-  direction, 
-  children, 
-  className = '', 
-  staggerChildren = 0.1 
+export function TextFade({
+  direction,
+  children,
+  className = '',
+  staggerChildren = 0.1,
 }) {
   const FADE_DOWN = {
     show: { opacity: 1, y: 0, transition: { type: 'spring' } },
     hidden: { opacity: 0, y: direction === 'down' ? -18 : 18 },
   };
 
-  const ref = useRef(null);
+  const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
