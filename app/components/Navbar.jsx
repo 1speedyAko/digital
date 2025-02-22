@@ -235,10 +235,15 @@ const Navbar = () => {
                 <Link href="/blog" className="text-gray-800 hover:bg-gray-100 p-2 rounded">
                   Blog
                 </Link>
-
-                <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500">
-                  Request Quote
-                </button>
+                <div>
+                  <Link href="/quote">
+                  <Button className="mt-4  text-white px-4 py-2 rounded-lg ">
+                    Request Quote
+                  </Button>
+                  </Link>
+                 
+               </div>
+                
               </div>
             </SheetContent>
           </Sheet>

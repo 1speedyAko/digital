@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TextFade } from './textfade';
+import { TextFade } from './TextFade';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ function Texts() {
   return (
     <div className="space-y-10 bg-white ">
       <TextFade>
-          <h1 className="font-bold text-center mt-3 pt-4 text-3xl">Let&apos;s walk you through</h1>              
+          <h2 className="font-bold text-center mt-3 pt-4 text-3xl">Let&apos;s walk you through</h2>              
       </TextFade>
 
 

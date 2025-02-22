@@ -1,13 +1,13 @@
 'use client'
 import React,{useEffect} from "react";
-import Intro from "../Intro";
-import Texts from "../Info";
+import Texts from "./Info";
 import Image from "next/image";
-import HoverDevCards from "../Nutshel";
+import HoverDevCards from "./Nutshel";
 import { useRouter } from "next/navigation";
-import { useLoading } from "../LoadingContext";
-import Faqs from "../Faqs";
-import Form from "../Form";
+import { useLoading } from "./LoadingContext";
+import Faqs from "./Faqs";
+import Form from "./Form";
+
 
 
 const faqsHome = [
@@ -45,7 +45,7 @@ const faqsHome = [
     },
   ];
 
-function Body() {
+function Section() {
     const router = useRouter()
     const { setIsLoading } = useLoading();
     
@@ -87,11 +87,7 @@ function Body() {
 
     return (
         <div>
-
-
-        <Intro/>
-
-        <div className="flex min-h-screen   items-center justify-center relative w-full pt-64 ">
+        <div className="flex min-h-screen   items-center justify-center relative w-full pt-10 ">
           
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
                 {cards.map((card, index) => (
@@ -111,9 +107,9 @@ function Body() {
                         <span className="grid place-content-center rounded-full  border mr-2 mt-4 font-bold primary text-3xl">{card.instruction}</span>
                         </div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
-                            <h1 className="font-dmserif text-3xl font-bold text-white">{card.title}
+                            <h2 className="font-dmserif text-3xl font-bold text-white">{card.title}
                               
-                            </h1>
+                            </h2>
                             <p className="text-lg italic text-white mb-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{card.description}</p>
                             <button
                                 className="font-com rounded-full shadow shadow-black/60 bg-neutral-900 py-10 px-3.5 text-sm capitalize text-white hover:bg-neutral-800 active:bg-neutral-700 active:scale-95 transition transform duration-150"
@@ -146,4 +142,4 @@ function Body() {
     );
 }
 
-export default Body;
+export default Section;

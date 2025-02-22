@@ -4,6 +4,7 @@ import React, { useState} from 'react';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { TextFade } from './TextFade';
+import { StaggeredFade } from './Staggered-fade';
 
 
 function Intro(
@@ -17,46 +18,20 @@ function Intro(
    
 
   return (
-    <div className="font-bold relative mt-36">
-      <div className="h-[50vh] flex flex-col ">
-       <div
-            ref={ref}
-            className="text-center text-gray-100 px-4 sm:px-8"
-          >
-  <AnimatePresence>
-  <h1 className="text-center">
-    {['LET\'S BUILD, IMPROVE,', 'AND SCALE YOUR BRAND'].map((line, lineIndex) => (
-      <div key={lineIndex} className="flex justify-center flex-wrap">
-        {line.split('').map((char, i) => (
-          <motion.span
-            key={`${lineIndex}-${i}`}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.05,
-              delay: (lineIndex * line.length + i) * 0.05,
-            }}
-            className="inline-block text-2xl sm:text-4xl md:text-5xl font-bold"
-          >
-            {char === ' ' ? <span>&nbsp;</span> : char}
-          </motion.span>
-        ))}
-      </div>
-    ))}
-  </h1>
-</AnimatePresence>
-
-    </div>
-
-        <div className="pt-2 text-2xl mt-2 md:min-h-max">
+    <div className="font-bold relative mt-36 min-h-full">
+      <div className="">
+      <StaggeredFade text={"We help elevate small and medium brands in the digital space"}/> 
          
+        <div className="pt-2 text-2xl mt-2 md:min-h-max">
+        
           <div className='grid md:grid-cols-2 sm:grid-cols-1 md:gap-8 sm:gap-3 px-5 text-xl text-center mt-7 min-h-max'>
-            <div className='flex flex-col'>
-              <TextFade>
-                  <p className=' flex-1 text-balance primary'>Digital Cheuxes is an online digital marketing agency that serves to provide quality services to online brands.We have a team of digital marketing professionals who work closely with our clients to grow brands and ensure that our clients achieve their targets and goals. We offer custom web design and digital marketing solutions for the best results.</p>                
-              </TextFade>
-              
-            </div>
+          <div className="">
+            <TextFade>
+              <p className="block w-full  text-balance primary text-center">
+              Digital Cheuxes is an online marketing agency dedicated to delivering top-quality services to online brands. Our team of digital marketing experts collaborates closely with clients to boost brand growth and ensure clients meet their objectives and targets. We specialize in creating custom web designs and digital marketing solutions tailored for optimal results.              </p>
+            </TextFade>
+          </div>
+
             <div className=' grid place-content-center ml-20  sm:block mt-5'>
               <TextFade>
               <Image

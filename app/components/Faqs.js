@@ -12,7 +12,7 @@ function Faqs({title="FAQS", faqs=[]}) {
     <div className='mt-0 theme '>
         {/* <TextFade direction='up' staggerChildren={0.4}> */}
         <TextFade>              
-            <h1 className='text-4xl font-bold text-center heading pt-2'>{title}</h1>                   
+            <h2 className='text-4xl font-bold text-center heading pt-2'>{title}</h2>                   
         </TextFade>
         
         <div className>

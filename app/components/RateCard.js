@@ -11,7 +11,7 @@ function RateCard({ details = [] }) {
 
   return (
     <div className='py-7'>
-      <h1 className='text-center mb-4 heading text-3xl font-bold'>Our Rates</h1>
+      <h2 className='text-center mb-4 heading text-3xl font-bold'>Our Rates</h2>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-8 px-5">
         {packagesToDisplay.map((detail, index) => (
           <div className="border p-4 theme py-24 pt-6" key={index}>
