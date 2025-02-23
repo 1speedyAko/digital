@@ -5,6 +5,8 @@ import { AnimatePresence, motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { TextFade } from './TextFade';
 import { StaggeredFade } from './Staggered-fade';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 
 function Intro(
@@ -30,6 +32,16 @@ function Intro(
               <p className="block w-full  text-balance primary text-center">
               Digital Cheuxes is an online marketing agency dedicated to delivering top-quality services to online brands. Our team of digital marketing experts collaborates closely with clients to boost brand growth and ensure clients meet their objectives and targets. We specialize in creating custom web designs and digital marketing solutions tailored for optimal results.              </p>
             </TextFade>
+            <div className="mt-2">
+              <Link href="/quote">
+                <Button className="relative overflow-hidden bg-blue-600 text-white px-6 py-3 text-lg rounded-xl transition-all duration-300 hover:shadow-xl hover:bg-blue-700">
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-50 blur-md transition-all duration-500 group-hover:opacity-100"></span>
+                  <span className="relative">Request Quote</span>
+                </Button>
+              </Link>
+            </div>
+
+
           </div>
 
             <div className=' grid place-content-center ml-20  sm:block mt-5'>

@@ -5,6 +5,7 @@ import { TextFade } from './TextFade';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { ArrowBigRight } from 'lucide-react';
 
 function Texts() {
   return (
@@ -26,6 +27,7 @@ function Texts() {
               At Digital Cheuxes, we specialize in elevating your brand to new heights through strategic digital marketing. By utilizing advanced marketing tools and harnessing the power of social media, we create impactful online campaigns that boost visibility, engage audiences, and drive measurable growth for your business.
               </p>
               <Button className='mt-2 '>
+                <ArrowBigRight/>
                 <Link href="/digitalm">
                 Read More
                 </Link>
@@ -69,6 +71,7 @@ function Texts() {
               We collaborate closely with our clients to deliver modern, custom-designed websites that align seamlessly with your brand guidelines. By enhancing your digital presence, we help you connect with a broader audience and create a lasting impact online              </p>
             </TextFade>
             <Button className='mt-2'>
+              <ArrowBigRight />
                 <Link href="/webdesign">
                Visit Web Design
                 </Link>
@@ -87,6 +90,7 @@ function Texts() {
               Our team of experienced graphic designers is dedicated to creating unique and impactful brand identities tailored to your vision. By engaging you in the design process, we ensure your branding aligns with your goals, enhancing recognition and driving success.              </p>
             </TextFade>
                <Button className='mt-2'>
+                <ArrowBigRight />
                 <Link href="/gdesign">
                Visit  Graphic Design
                 </Link>
