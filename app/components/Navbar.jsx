@@ -66,12 +66,12 @@ const Navbar = () => {
     <motion.nav 
       className="fixed top-0 left-0 right-0 shadow-md z-50 theme"
       initial={{ y: 0 }}
-      animate={{ y: visible ? 0 : -100 }}
+      animate={{ y: visible ? 0 : -200 }}
       transition={{ duration: 0.3 }}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Image src="/cover.png" width={150} height={89} alt="Logo" />
+        <Image src="/gray.png" width={150} height={100} alt="Logo" />
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 justify-center w-full">
