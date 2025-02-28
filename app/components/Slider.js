@@ -1,14 +1,39 @@
 'use client';
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Slider = ({ title, processSteps, FooterText }) => {
   return (
     <div className="bg-neutral-200">
       <div className="flex h-11 items-center justify-center">
-        <span className="font-bold uppercase text-xl mt-20 ">{title}</span>
+        <span className="font-bold uppercase text-xl mt-10 ">{title}</span>
       </div>
-      <HorizontalScrollCarousel cards={processSteps} />
+      <div className="p-4">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: false,
+          }}
+          className="w-full max-w-7xl mx-auto relative"
+        >
+          <CarouselContent className="-ml-4">
+            {processSteps.map((card) => (
+              <CarouselItem key={card.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card card={card} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center mt-4 gap-2">
+            <CarouselPrevious className="theme inline-flex static transform-none" />
+            <CarouselNext className="theme inline-flex static transform-none" />
+          </div>
+        </Carousel>
+      </div>
       <div className="flex h-11 items-center justify-center">
         <span className="font-semibold uppercase bg-transparent">
           {FooterText}
@@ -18,33 +43,9 @@ const Slider = ({ title, processSteps, FooterText }) => {
   );
 };
 
-const HorizontalScrollCarousel = ({ cards }) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
-
-  return (
-    <section ref={targetRef} className="relative h-[200vh] bg-transparent">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
-          {cards.map((card) => (
-            <Card card={card} key={card.id} />
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
 const Card = ({ card }) => {
   return (
-    <div
-      key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden theme p-4 space-y-2"
-    >
+    <div className="group relative h-[450px] w-full overflow-hidden theme p-4 space-y-2">
       {/* Card ID */}
       <div className="flex justify-center">
         <span className="text-center text-2xl font-bold bg-neutral-200 rounded-full w-14 h-14 flex items-center justify-center">
