@@ -28,7 +28,7 @@ export default function Navbar() {
               alt="Logo"
               width={150}
               height={100}
-              className="h-20 w-auto"
+              className="h-12 w-auto"
               priority
               quality={100}
               style={{

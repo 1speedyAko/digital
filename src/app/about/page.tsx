@@ -15,8 +15,7 @@ const team = [
   {
     name: "Charles Ako",
     role: "Creative Director & Founder",
-    // image:
-    //   "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    image:'images/me.jpg',
     bio: "With over 3 years in design and development, Charles leads our creative vision and ensures every project exceeds expectations.",
   },
 ];
@@ -118,11 +117,11 @@ export default function About() {
               <Card key={member.name} className="w-72 text-center">
                 <CardContent className="p-6">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                    {/* <img
-                      // src={member.image}
-                      // alt={member.name}
-                      className="object-cover w-full h-full"
-                    /> */}
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="object-cover w-full h-full object-top"
+                    />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                   <p className="text-primary font-medium mb-4">{member.role}</p>
