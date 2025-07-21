@@ -78,8 +78,8 @@ const servicesData: Record<string, ServiceData> = {
     },
     testimonial: {
       text: "The logo perfectly captures our brand essence. It's been instrumental in establishing our market presence.",
-      author: "Sarah Johnson",
-      company: "TechStart Inc.",
+      author: "Rodney Winston",
+      company: "Winrova Tech.",
     },
   },
   "poster-design": {
@@ -580,17 +580,17 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                     />
                   ))}
                 </div>
-                <blockquote className="text-lg italic mb-4">
+                {/* <blockquote className="text-lg italic mb-4">
                   &quot;{service.testimonial.text}&quot;
-                </blockquote>
-                <div>
+                </blockquote> */}
+                {/* <div>
                   <div className="font-semibold">
                     {service.testimonial.author}
                   </div>
                   <div className="text-sm text-muted-foreground">
                     {service.testimonial.company}
                   </div>
-                </div>
+                </div> */}
               </div>
             </CardContent>
           </Card>
